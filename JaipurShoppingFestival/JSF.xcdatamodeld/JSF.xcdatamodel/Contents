@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5063" systemVersion="12F37" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="AlbumImages" representedClassName="AlbumImages" syncable="YES">
+        <attribute name="photoDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photoDislikes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photoHeading" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photoId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photoLikes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photoURL" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="albums" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="JSFAlbums" inverseName="albumImages" inverseEntity="JSFAlbums" syncable="YES"/>
+    </entity>
+    <entity name="AlbumVideos" representedClassName="AlbumVideos" syncable="YES">
+        <attribute name="video3gpURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="videoDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="videoDislikes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="videoHeading" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="videoId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="videoLikes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="videoMp4URL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="videoYoutubeURL" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="albumVids" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="JSFVideoAlbum" inverseName="albumVideos" inverseEntity="JSFVideoAlbum" syncable="YES"/>
+    </entity>
+    <entity name="EventImages" representedClassName="EventImages" syncable="YES">
+        <attribute name="imageDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageHeading" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="eventsImage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Events" inverseName="eventsImages" inverseEntity="Events" syncable="YES"/>
+    </entity>
+    <entity name="EventPartners" representedClassName="EventPartners" syncable="YES">
+        <attribute name="partnerId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="partnerLogo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="partnerName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="partnerWebsiteURL" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="eventsPartner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Events" inverseName="eventsPartners" inverseEntity="Events" syncable="YES"/>
+    </entity>
+    <entity name="Events" representedClassName="Events" isAbstract="YES" syncable="YES">
+        <attribute name="eventDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="eventEndDateTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="eventId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="eventName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="eventPincode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="eventStartDateTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="eventTicketPrice" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="eventTicketURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="eventVenue" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="eventsImages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="EventImages" inverseName="eventsImage" inverseEntity="EventImages" syncable="YES"/>
+        <relationship name="eventsPartners" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="EventPartners" inverseName="eventsPartner" inverseEntity="EventPartners" syncable="YES"/>
+    </entity>
+    <entity name="JSFAlbums" representedClassName="JSFAlbums" syncable="YES">
+        <attribute name="albumDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="albumId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="albumImage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="albumName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="albumImages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AlbumImages" inverseName="albums" inverseEntity="AlbumImages" syncable="YES"/>
+    </entity>
+    <entity name="JSFContactInfo" representedClassName="JSFContactInfo" syncable="YES">
+        <attribute name="developerDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="developerFbURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="developerTwitterURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="developerWebsite" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="jsfDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="jsfEmailAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="jsfFbURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="jsfGoogleURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="jsfInstagramURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="jsfPhoneNumbers" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="jsfTwitterURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="jsfYoutubeURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="patrikaAndroidAppURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="patrikaDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="patrikaFbURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="patrikaiPhoneAppURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="patrikaTwitterURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="patrikaWebsiteURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="patrikaYoutubeURL" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="JSFPartners" representedClassName="JSFPartners" syncable="YES">
+        <attribute name="partnerId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="partnerLogo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="partnerName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="partnerWebsiteURL" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="JSFRafflesListing" representedClassName="JSFRafflesListing" syncable="YES">
+        <attribute name="raffleCategoryId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="raffleId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="raffleNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="raffleStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="raffleUserEnteredPlaceId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="raffleUserEnteredShopId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="raffleUserNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="raffleUserShoppingAmount" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shopId" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="JSFSponsors" representedClassName="JSFSponsors" syncable="YES">
+        <attribute name="sponsorDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sponsorId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sponsorLogo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sponsorName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sponsorWebsiteURL" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="JSFTestimonials" representedClassName="JSFTestimonials" syncable="YES">
+        <attribute name="testimonialDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="testimonialHeading" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="testimonialId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="testimonialImageURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="testimonialUserDesignation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="testimonialUsername" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="JSFUsedRafflesListing" representedClassName="JSFUsedRafflesListing" syncable="YES">
+        <attribute name="raffleId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="raffleUserEnteredPlaceId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="raffleUserEnteredShopId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="raffleUserPhone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="raffleUserShoppingAmount" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="raffleUserUniqueNumber" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="JSFVideoAlbum" representedClassName="JSFVideoAlbum" syncable="YES">
+        <attribute name="videoAlbumDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="videoAlbumId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="videoAlbumImage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="videoAlbumName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="albumVideos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AlbumVideos" inverseName="albumVids" inverseEntity="AlbumVideos" syncable="YES"/>
+    </entity>
+    <entity name="PlaceCategories" representedClassName="PlaceCategories" syncable="YES">
+        <attribute name="categoryDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categoryId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categoryName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="placesCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PlacesListing" inverseName="placesCategories" inverseEntity="PlacesListing" syncable="YES"/>
+    </entity>
+    <entity name="PlacesListing" representedClassName="PlacesListing" syncable="YES">
+        <attribute name="placeAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placeBanner" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placeDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placeId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placeName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placePincode" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="placesCategories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PlaceCategories" inverseName="placesCategory" inverseEntity="PlaceCategories" syncable="YES"/>
+    </entity>
+    <entity name="ShopCategories" representedClassName="ShopCategories" syncable="YES">
+        <attribute name="categoryDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categoryId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categoryName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="shopsCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ShopsListing" inverseName="shopsCategories" inverseEntity="ShopsListing" syncable="YES"/>
+    </entity>
+    <entity name="ShopsListing" representedClassName="ShopsListing" syncable="YES">
+        <attribute name="placeId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shopAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shopId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shopImage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shopName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shopOwnerName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shopPincode" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="shopsCategories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ShopCategories" inverseName="shopsCategory" inverseEntity="ShopCategories" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="AlbumImages" positionX="18" positionY="126" width="128" height="150"/>
+        <element name="AlbumVideos" positionX="36" positionY="144" width="128" height="180"/>
+        <element name="EventImages" positionX="-54" positionY="63" width="128" height="118"/>
+        <element name="EventPartners" positionX="-36" positionY="72" width="128" height="120"/>
+        <element name="Events" positionX="-63" positionY="-18" width="128" height="208"/>
+        <element name="JSFAlbums" positionX="9" positionY="117" width="128" height="120"/>
+        <element name="JSFContactInfo" positionX="9" positionY="144" width="128" height="330"/>
+        <element name="JSFPartners" positionX="-9" positionY="99" width="128" height="105"/>
+        <element name="JSFRafflesListing" positionX="-9" positionY="126" width="128" height="180"/>
+        <element name="JSFSponsors" positionX="0" positionY="108" width="128" height="118"/>
+        <element name="JSFTestimonials" positionX="45" positionY="180" width="128" height="135"/>
+        <element name="JSFUsedRafflesListing" positionX="0" positionY="135" width="128" height="135"/>
+        <element name="JSFVideoAlbum" positionX="27" positionY="135" width="128" height="120"/>
+        <element name="PlaceCategories" positionX="0" positionY="117" width="128" height="103"/>
+        <element name="PlacesListing" positionX="-18" positionY="81" width="128" height="148"/>
+        <element name="ShopCategories" positionX="36" positionY="153" width="128" height="103"/>
+        <element name="ShopsListing" positionX="18" positionY="117" width="128" height="163"/>
+    </elements>
+</model>
