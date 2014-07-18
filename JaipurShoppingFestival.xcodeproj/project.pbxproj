@@ -15,6 +15,7 @@
 		3018933419789900005A7E28 /* videoicon02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3018933019789900005A7E28 /* videoicon02@2x.png */; };
 		3018933519789900005A7E28 /* videoicon03@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3018933119789900005A7E28 /* videoicon03@2x.png */; };
 		3018933619789900005A7E28 /* videoicon04@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3018933219789900005A7E28 /* videoicon04@2x.png */; };
+		30DECB871979805600E1E27D /* AlbumImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DECB861979805600E1E27D /* AlbumImages.m */; };
 		843B6F251955F12500A876B3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843B6F241955F12500A876B3 /* CoreData.framework */; };
 		843B6F291955F3BC00A876B3 /* JSFEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843B6F271955F3BC00A876B3 /* JSFEventsViewController.m */; };
 		843B6F2E1955F3D100A876B3 /* JSFWhatToBuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843B6F2C1955F3D100A876B3 /* JSFWhatToBuyViewController.m */; };
@@ -31,7 +32,6 @@
 		843B6F651955F4B600A876B3 /* JSFAboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843B6F631955F4B600A876B3 /* JSFAboutUsViewController.m */; };
 		843B6F6A1955F4C700A876B3 /* JSFAboutPatrikaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843B6F681955F4C700A876B3 /* JSFAboutPatrikaViewController.m */; };
 		843B6F741955FDEC00A876B3 /* AlbumVideos.m in Sources */ = {isa = PBXBuildFile; fileRef = 843B6F731955FDEC00A876B3 /* AlbumVideos.m */; };
-		843B6F771955FDEC00A876B3 /* AlbumImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 843B6F761955FDEC00A876B3 /* AlbumImages.m */; };
 		843B6F801955FE0A00A876B3 /* JSFContactInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 843B6F7F1955FE0A00A876B3 /* JSFContactInfo.m */; };
 		843B6F831955FE0A00A876B3 /* JSFPartners.m in Sources */ = {isa = PBXBuildFile; fileRef = 843B6F821955FE0A00A876B3 /* JSFPartners.m */; };
 		843B6F861955FE2700A876B3 /* JSFSponsors.m in Sources */ = {isa = PBXBuildFile; fileRef = 843B6F851955FE2700A876B3 /* JSFSponsors.m */; };
@@ -258,6 +258,8 @@
 		3018933019789900005A7E28 /* videoicon02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "videoicon02@2x.png"; sourceTree = "<group>"; };
 		3018933119789900005A7E28 /* videoicon03@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "videoicon03@2x.png"; sourceTree = "<group>"; };
 		3018933219789900005A7E28 /* videoicon04@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "videoicon04@2x.png"; sourceTree = "<group>"; };
+		30DECB851979805600E1E27D /* AlbumImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumImages.h; sourceTree = "<group>"; };
+		30DECB861979805600E1E27D /* AlbumImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumImages.m; sourceTree = "<group>"; };
 		843B6F231955EC1800A876B3 /* Service.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Service.h; sourceTree = "<group>"; };
 		843B6F241955F12500A876B3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		843B6F261955F3BC00A876B3 /* JSFEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSFEventsViewController.h; sourceTree = "<group>"; };
@@ -290,8 +292,6 @@
 		843B6F681955F4C700A876B3 /* JSFAboutPatrikaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSFAboutPatrikaViewController.m; sourceTree = "<group>"; };
 		843B6F721955FDEC00A876B3 /* AlbumVideos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumVideos.h; sourceTree = "<group>"; };
 		843B6F731955FDEC00A876B3 /* AlbumVideos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumVideos.m; sourceTree = "<group>"; };
-		843B6F751955FDEC00A876B3 /* AlbumImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumImages.h; sourceTree = "<group>"; };
-		843B6F761955FDEC00A876B3 /* AlbumImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumImages.m; sourceTree = "<group>"; };
 		843B6F7E1955FE0A00A876B3 /* JSFContactInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSFContactInfo.h; sourceTree = "<group>"; };
 		843B6F7F1955FE0A00A876B3 /* JSFContactInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSFContactInfo.m; sourceTree = "<group>"; };
 		843B6F811955FE0A00A876B3 /* JSFPartners.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSFPartners.h; sourceTree = "<group>"; };
@@ -1174,8 +1174,8 @@
 				84729889196FF94A00094668 /* JSFAlbums.m */,
 				B2C5AF2819719B63005B6422 /* JSFVideoAlbum.h */,
 				B2C5AF2919719B63005B6422 /* JSFVideoAlbum.m */,
-				843B6F751955FDEC00A876B3 /* AlbumImages.h */,
-				843B6F761955FDEC00A876B3 /* AlbumImages.m */,
+				30DECB851979805600E1E27D /* AlbumImages.h */,
+				30DECB861979805600E1E27D /* AlbumImages.m */,
 				843B6F721955FDEC00A876B3 /* AlbumVideos.h */,
 				843B6F731955FDEC00A876B3 /* AlbumVideos.m */,
 				843B6FA21955FF9E00A876B3 /* ShopsListing.h */,
@@ -1487,7 +1487,6 @@
 				9C09141819793E930037B8A5 /* EventDetailCollectionViewCellItemImage.m in Sources */,
 				84BDBB6419556030005D2A12 /* NSManagedObjectContext+MagicalThreading.m in Sources */,
 				84BDBB5419556030005D2A12 /* AFURLSessionManager.m in Sources */,
-				843B6F771955FDEC00A876B3 /* AlbumImages.m in Sources */,
 				843B6F9B1955FE3F00A876B3 /* PlaceCategories.m in Sources */,
 				B2C5AF381971A7B6005B6422 /* JSFPhotoGalleryViewController.m in Sources */,
 				843B6F6A1955F4C700A876B3 /* JSFAboutPatrikaViewController.m in Sources */,
@@ -1510,6 +1509,7 @@
 				B2C5AF4B19722E87005B6422 /* EventDetailCollectionViewCell.m in Sources */,
 				8472988A196FF94A00094668 /* JSFAlbums.m in Sources */,
 				B2C5AF2A19719B63005B6422 /* JSFVideoAlbum.m in Sources */,
+				30DECB871979805600E1E27D /* AlbumImages.m in Sources */,
 				84F5D89B19688796006A7E3B /* EventsCell.m in Sources */,
 				84BDBB5319556030005D2A12 /* AFURLResponseSerialization.m in Sources */,
 				84D059CC196B1E0800D03E82 /* WhereToBuyCell.m in Sources */,

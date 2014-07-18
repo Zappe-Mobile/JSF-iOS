@@ -10,6 +10,10 @@
 #import "PhotoCollectionViewCell.h"
 #import "AlbumImages.h"
 #import "UIImageView+AFNetworking.h"
+#import "RequestManager.h"
+#import "Reachability.h"
+#import "SVProgressHUD.h"
+#import "DataManager.h"
 
 @interface JSFPhotoGalleryViewController ()
 {
@@ -22,9 +26,14 @@
     __weak IBOutlet UIButton * btnPrev;
     __weak IBOutlet UIButton * btnNext;
     
+    __weak IBOutlet UILabel * lblLikesCount;
+    __weak IBOutlet UILabel * lblDislikesCount;
+    
     __weak IBOutlet UICollectionView * collectionViewGallery;
     
     NSMutableArray * arrayAlbumImages;
+    
+    NSInteger selectedIndex;
 }
 @end
 
@@ -61,6 +70,9 @@
     AlbumImages * Object = arrayAlbumImages[0];
     [imgGalleryPhoto setImageWithURL:[NSURL URLWithString:Object.photoURL] placeholderImage:[UIImage imageNamed:@"eventbanner.jpg"]];
     lblPhotoName.text = Object.photoHeading;
+    lblLikesCount.text = Object.photoLikes;
+    lblDislikesCount.text = Object.photoDislikes;
+    selectedIndex = 0;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -119,18 +131,160 @@
     AlbumImages * Object = arrayAlbumImages[indexPath.item];
     [imgGalleryPhoto setImageWithURL:[NSURL URLWithString:Object.photoURL] placeholderImage:[UIImage imageNamed:@"eventbanner.jpg"]];
     lblPhotoName.text = Object.photoHeading;
+    lblLikesCount.text = Object.photoLikes;
+    lblDislikesCount.text = Object.photoDislikes;
+    selectedIndex = indexPath.row;
     
 }
 
 - (IBAction)photoLikeButtonClicked:(id)sender
 {
-    
+    AlbumImages * Object = arrayAlbumImages[selectedIndex];
+    if ([Object.photoIsLike intValue] == 0) {
+        
+        if ([[Reachability reachabilityForInternetConnection]isReachable]) {
+            
+            [SVProgressHUD showWithStatus:@"Loading" maskType:SVProgressHUDMaskTypeBlack];
+            [[RequestManager sharedManager]updatePhotoLikeIncrementWithPhotoId:Object.photoId withCompletionBlock:^(BOOL result, id resultObject) {
+                
+                [SVProgressHUD dismiss];
+                if (result) {
+                    NSLog(@"%@",resultObject);
+                    lblLikesCount.text = [resultObject objectForKey:@"likes"];
+                    NSNumber *yourNumber = [NSNumber numberWithInt:1];
+                    [DataManager updateAlbumImagesLikeStatusWithPhotoId:Object.photoId withStatus:yourNumber withDataBlock:^(BOOL success, NSError *error) {
+                        
+                        if (success) {
+                            
+                        }
+                        else {
+                            
+                        }
+                    }];
+                }
+                else {
+                    
+                }
+            }];
+        }
+        else {
+            
+            UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Message" message:@"Internet Not Reachable.Please try Again" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            [alert show];
+            
+        }
+
+    }
+    else {
+        
+        if ([[Reachability reachabilityForInternetConnection]isReachable]) {
+            
+            [SVProgressHUD showWithStatus:@"Loading" maskType:SVProgressHUDMaskTypeBlack];
+            [[RequestManager sharedManager]updatePhotoLikeDecrementWithPhotoId:Object.photoId withCompletionBlock:^(BOOL result, id resultObject) {
+                
+                [SVProgressHUD dismiss];
+                if (result) {
+                    
+                    NSLog(@"%@",resultObject);
+                    lblLikesCount.text = [resultObject objectForKey:@"likes"];
+                    NSNumber *yourNumber = [NSNumber numberWithInt:0];
+                    [DataManager updateAlbumImagesLikeStatusWithPhotoId:Object.photoId withStatus:yourNumber withDataBlock:^(BOOL success, NSError *error) {
+                        
+                        if (success) {
+                            
+                        }
+                        else {
+                            
+                        }
+                    }];
+                }
+                else {
+                    
+                }
+            }];
+             
+        }
+        else {
+            
+            UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Message" message:@"Internet Not Reachable.Please try Again" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            [alert show];
+            
+        }
+
+    }
 }
 
 
 - (IBAction)photoDislikeButtonClicked:(id)sender
 {
-    
+    AlbumImages * Object = arrayAlbumImages[selectedIndex];
+    if ([Object.photoIsDislike intValue] == 0) {
+
+        if ([[Reachability reachabilityForInternetConnection]isReachable]) {
+            
+            [SVProgressHUD showWithStatus:@"Loading" maskType:SVProgressHUDMaskTypeBlack];
+            [[RequestManager sharedManager]updatePhotoDislikeIncrementWithPhotoId:Object.photoId withCompletionBlock:^(BOOL result, id resultObject) {
+                
+                [SVProgressHUD dismiss];
+                if (result) {
+                    NSLog(@"%@",resultObject);
+                    lblDislikesCount.text = [resultObject objectForKey:@"dislikes"];
+                    NSNumber *yourNumber = [NSNumber numberWithInt:1];
+                    [DataManager updateAlbumImagesDislikeStatusWithPhotoId:Object.photoId withStatus:yourNumber withDataBlock:^(BOOL success, NSError *error) {
+                        
+                        if (success) {
+                            
+                        }
+                        else {
+                            
+                        }
+                    }];
+                }
+                else {
+                    
+                }
+            }];
+        }
+        else {
+            UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Message" message:@"Internet Not Reachable.Please try Again" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            [alert show];
+            
+        }
+
+    }
+    else {
+        
+        if ([[Reachability reachabilityForInternetConnection]isReachable]) {
+            
+            [SVProgressHUD showWithStatus:@"Loading" maskType:SVProgressHUDMaskTypeBlack];
+            [[RequestManager sharedManager]updatePhotoDislikeDecrementWithPhotoId:Object.photoId withCompletionBlock:^(BOOL result, id resultObject) {
+                
+                [SVProgressHUD dismiss];
+                if (result) {
+                    NSLog(@"%@",resultObject);
+                    lblDislikesCount.text = [resultObject objectForKey:@"dislikes"];
+                    NSNumber *yourNumber = [NSNumber numberWithInt:0];
+                    [DataManager updateAlbumImagesDislikeStatusWithPhotoId:Object.photoId withStatus:yourNumber withDataBlock:^(BOOL success, NSError *error) {
+                        
+                        if (success) {
+                            
+                        }
+                        else {
+                            
+                        }
+                    }];
+                }
+                else {
+                    
+                }
+            }];
+        }
+        else {
+            UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Message" message:@"Internet Not Reachable.Please try Again" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            [alert show];
+ 
+        }
+    }
 }
 
 - (IBAction)shareButtonClicked:(id)sender

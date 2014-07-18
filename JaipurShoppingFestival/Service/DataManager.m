@@ -25,6 +25,8 @@
 #import "JSFTestimonials.h"
 #import "JSFContactInfo.h"
 
+#define NULL_TO_NIL(obj) ({ __typeof__ (obj) __obj = (obj); __obj == [NSNull null] ? nil : obj; })
+
 @implementation DataManager
 
 
@@ -484,49 +486,25 @@
 {
     NSLog(@"%@",dataArray);
     
+    for (JSFSponsors * Object in [DataManager fetchAllJSFSponsorsFromCoreData]) {
+        [Object MR_deleteEntity];
+    }
+    
     [dataArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         
-        JSFSponsors * shopObj = [JSFSponsors MR_findFirstByAttribute:@"sponsorId" withValue:[obj objectForKey:@"sponsor_id"]];
-        if (!shopObj) {
-            shopObj = [JSFSponsors MR_createInContext:[NSManagedObjectContext MR_defaultContext]];
+        JSFSponsors *shopObj = [JSFSponsors MR_createInContext:[NSManagedObjectContext MR_defaultContext]];
             
-            if ([obj objectForKey:@"sponsor_id"]!= NULL || [obj objectForKey:@"sponsor_id"]!= [NSNull null]) {
-                shopObj.sponsorId = [obj objectForKey:@"sponsor_id"];
-            }
-            else {
-                shopObj.sponsorId = @"";
-            }
+            shopObj.sponsorId = NULL_TO_NIL([obj objectForKey:@"sponsor_id"]);
             
-            if ([obj objectForKey:@"sponsor_logo"]!= NULL || [obj objectForKey:@"sponsor_logo"]!= [NSNull null]) {
-                shopObj.sponsorLogo = [obj objectForKey:@"sponsor_logo"];
-            }
-            else {
-                shopObj.sponsorLogo = @"";
-            }
+            shopObj.sponsorLogo = NULL_TO_NIL([obj objectForKey:@"sponsor_logo"]);
             
-            if ([obj objectForKey:@"sponsor_name"]!= NULL || [obj objectForKey:@"sponsor_name"]!= [NSNull null]) {
-                shopObj.sponsorName = [obj objectForKey:@"sponsor_name"];
-            }
-            else {
-                shopObj.sponsorName = @"";
-            }
+            shopObj.sponsorName = NULL_TO_NIL([obj objectForKey:@"sponsor_name"]);
             
-            if ([obj objectForKey:@"sponsor_website_url"]!= NULL || [obj objectForKey:@"sponsor_website_url"]!= [NSNull null]) {
-                shopObj.sponsorWebsiteURL = [obj objectForKey:@"sponsor_website_url"];
-            }
-            else {
-                shopObj.sponsorWebsiteURL = @"";
-            }
+            shopObj.sponsorWebsiteURL = NULL_TO_NIL([obj objectForKey:@"sponsor_website_url"]);
             
-            if ([obj objectForKey:@"sponsors_description"]!= NULL || [obj objectForKey:@"sponsors_description"]!= [NSNull null]) {
-                shopObj.sponsorDescription = [obj objectForKey:@"sponsors_description"];
-            }
-            else {
-                shopObj.sponsorDescription = @"";
-            }
+            shopObj.sponsorDescription = NULL_TO_NIL([obj objectForKey:@"sponsors_description"]);
 
             
-        }
     }];
     
     [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:block];
@@ -631,6 +609,10 @@
                 else {
                     albumPhotosObj.photoURL = @"";
                 }
+                
+                albumPhotosObj.photoIsLike = [NSNumber numberWithInt:0];
+                
+                albumPhotosObj.photoIsDislike = [NSNumber numberWithInt:0];
 
                 
                 [albumPhotosSet addObject:albumPhotosObj];
@@ -855,72 +837,24 @@
         if (!shopObj) {
             shopObj = [JSFRafflesListing MR_createInContext:[NSManagedObjectContext MR_defaultContext]];
             
-            if ([obj objectForKey:@"raffle_id"]!= NULL || [obj objectForKey:@"raffle_id"]!= [NSNull null]) {
-                shopObj.raffleId = [obj objectForKey:@"raffle_id"];
-            }
-            else {
-                shopObj.raffleId = @"";
-            }
+                shopObj.raffleId = NULL_TO_NIL([obj objectForKey:@"raffle_id"]);
             
-            if ([obj objectForKey:@"raffle_number"]!= NULL || [obj objectForKey:@"raffle_number"]!= [NSNull null]) {
-                shopObj.raffleNumber = [obj objectForKey:@"raffle_number"];
-            }
-            else {
-                shopObj.raffleNumber = @"";
-            }
-            
-            if ([obj objectForKey:@"raffle_status"]!= NULL || [obj objectForKey:@"raffle_status"]!= [NSNull null]) {
-                shopObj.raffleStatus = [obj objectForKey:@"raffle_status"];
-            }
-            else {
-                shopObj.raffleStatus = @"";
-            }
-            
-            if ([obj objectForKey:@"raffle_category_id"]!= NULL || [obj objectForKey:@"raffle_category_id"]!= [NSNull null]) {
-                shopObj.raffleCategoryId = [obj objectForKey:@"raffle_category_id"];
-            }
-            else {
-                shopObj.raffleCategoryId = @"";
-            }
-            
-            if ([obj objectForKey:@"raffle_user_entered_placeID"]!= NULL || [obj objectForKey:@"raffle_user_entered_placeID"]!= [NSNull null]) {
-                shopObj.raffleUserEnteredPlaceId = [obj objectForKey:@"raffle_user_entered_placeID"];
-            }
-            else {
-                shopObj.raffleUserEnteredPlaceId = @"";
-            }
-            
-            if ([obj objectForKey:@"raffle_user_entered_shopID"]!= NULL || [obj objectForKey:@"raffle_user_entered_shopID"]!= [NSNull null]) {
-                shopObj.raffleUserEnteredShopId = [obj objectForKey:@"raffle_user_entered_shopID"];
-            }
-            else {
-                shopObj.raffleUserEnteredShopId = @"";
-            }
-            
-            if ([obj objectForKey:@"raffle_user_number"]!= NULL || [obj objectForKey:@"raffle_user_number"]!= [NSNull null]) {
-                shopObj.raffleUserNumber = [obj objectForKey:@"raffle_user_number"];
-            }
-            else {
-                shopObj.raffleUserNumber = @"";
-            }
+                shopObj.raffleNumber = NULL_TO_NIL([obj objectForKey:@"raffle_number"]);
 
-            if ([obj objectForKey:@"raffle_user_shopping_amount"]!= NULL || [obj objectForKey:@"raffle_user_shopping_amount"]!= [NSNull null]) {
-                shopObj.raffleUserShoppingAmount = [obj objectForKey:@"raffle_user_shopping_amount"];
-            }
-            else {
-                shopObj.raffleUserShoppingAmount = @"";
-            }
+                shopObj.raffleStatus = NULL_TO_NIL([obj objectForKey:@"raffle_status"]);
+            
+                shopObj.raffleCategoryId = NULL_TO_NIL([obj objectForKey:@"raffle_category_id"]);
+            
+                shopObj.raffleUserEnteredPlaceId = NULL_TO_NIL([obj objectForKey:@"raffle_user_entered_placeID"]);
+            
+                shopObj.raffleUserEnteredShopId = NULL_TO_NIL([obj objectForKey:@"raffle_user_entered_shopID"]);
+            
+                shopObj.raffleUserNumber = NULL_TO_NIL([obj objectForKey:@"raffle_user_number"]);
 
-            if ([obj objectForKey:@"shop_id"]!= NULL || [obj objectForKey:@"shop_id"]!= [NSNull null]) {
-                shopObj.shopId = [obj objectForKey:@"shop_id"];
-            }
-            else {
-                shopObj.shopId = @"";
-            }
+                shopObj.raffleUserShoppingAmount = NULL_TO_NIL([obj objectForKey:@"raffle_user_shopping_amount"]);
 
-            
-            
-            
+                shopObj.shopId = NULL_TO_NIL([obj objectForKey:@"shop_id"]);
+
         }
     }];
     
@@ -1069,6 +1003,44 @@
 + (NSMutableArray *)fetchAllJSFContactInfoFromCoreData
 {
     return [JSFContactInfo MR_findAll].mutableCopy;
+}
+
+/**
+ *  Update Album Images
+ *
+ *  @param photoId Photo Id
+ *  @param status  0 OR 1
+ *  @param block   Block Returning Success OR Failure
+ */
++(void)updateAlbumImagesLikeStatusWithPhotoId:(NSString *)photoId withStatus:(NSNumber *)status withDataBlock:(DataBlock)block
+{
+    AlbumImages * albumObj = [AlbumImages MR_findFirstByAttribute:@"photoId" withValue:photoId];
+    
+    if (albumObj) {
+        albumObj.photoIsLike = status;
+    }
+    
+    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:block];
+}
+
+
+/**
+ *  Update Album Images Dislike
+ *
+ *  @param photoId Photo Id
+ *  @param status  0 OR 1
+ *  @param block   Block Returning Success OR Failure
+ */
++(void)updateAlbumImagesDislikeStatusWithPhotoId:(NSString *)photoId withStatus:(NSNumber *)status withDataBlock:(DataBlock)block
+{
+    AlbumImages * albumObj = [AlbumImages MR_findFirstByAttribute:@"photoId" withValue:photoId];
+    
+    if (albumObj) {
+        albumObj.photoIsDislike = status;
+    }
+    
+    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:block];
+
 }
 
 @end

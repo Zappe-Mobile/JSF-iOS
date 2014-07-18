@@ -492,11 +492,11 @@ static RequestManager * sharedManager;
  *
  *  @param block Success OR Failure
  */
-- (void)updatePhotoLikeIncrementWithCompletionBlock:(CompletionBlock)block
+- (void)updatePhotoLikeIncrementWithPhotoId:(NSString *)photoId withCompletionBlock:(CompletionBlock)block;
 {
     self.completionBlock = block;
     
-    NSURL *URL = [NSURL URLWithString:PHOTO_LIKE_INCREMENT];
+    NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:PHOTO_LIKE_INCREMENT,photoId]];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL
                                                            cachePolicy:NSURLRequestReloadIgnoringCacheData  timeoutInterval:10];
     
@@ -504,7 +504,7 @@ static RequestManager * sharedManager;
     
     AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     op.responseSerializer = [AFJSONResponseSerializer serializer];
-//    op.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+    op.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
     [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         NSLog(@"JSON responseObject: %@ ",responseObject);
@@ -532,11 +532,11 @@ static RequestManager * sharedManager;
  *
  *  @param block Success OR Failure
  */
-- (void)updatePhotoLikeDecrementWithCompletionBlock:(CompletionBlock)block
+- (void)updatePhotoLikeDecrementWithPhotoId:(NSString *)photoId withCompletionBlock:(CompletionBlock)block
 {
     self.completionBlock = block;
     
-    NSURL *URL = [NSURL URLWithString:PHOTO_LIKE_DECREMENT];
+    NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:PHOTO_LIKE_DECREMENT,photoId]];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL
                                                            cachePolicy:NSURLRequestReloadIgnoringCacheData  timeoutInterval:10];
     
@@ -544,7 +544,7 @@ static RequestManager * sharedManager;
     
     AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     op.responseSerializer = [AFJSONResponseSerializer serializer];
-//    op.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+    op.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
     [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         NSLog(@"JSON responseObject: %@ ",responseObject);
@@ -572,11 +572,11 @@ static RequestManager * sharedManager;
  *
  *  @param block Success OR Failure
  */
-- (void)updatePhotoDislikeIncrementWithCompletionBlock:(CompletionBlock)block
+- (void)updatePhotoDislikeIncrementWithPhotoId:(NSString *)photoId withCompletionBlock:(CompletionBlock)block;
 {
     self.completionBlock = block;
     
-    NSURL *URL = [NSURL URLWithString:PHOTO_DISLIKE_INCREMENT];
+    NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:PHOTO_DISLIKE_INCREMENT,photoId]];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL
                                                            cachePolicy:NSURLRequestReloadIgnoringCacheData  timeoutInterval:10];
     
@@ -584,7 +584,7 @@ static RequestManager * sharedManager;
     
     AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     op.responseSerializer = [AFJSONResponseSerializer serializer];
-//    op.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+    op.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
     [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         NSLog(@"JSON responseObject: %@ ",responseObject);
@@ -612,11 +612,11 @@ static RequestManager * sharedManager;
  *
  *  @param block Success OR Failure
  */
-- (void)updatePhotoDislikeDecrementWithCompletionBlock:(CompletionBlock)block
+- (void)updatePhotoDislikeDecrementWithPhotoId:(NSString *)photoId withCompletionBlock:(CompletionBlock)block;
 {
     self.completionBlock = block;
     
-    NSURL *URL = [NSURL URLWithString:PHOTO_DISLIKE_DECREMENT];
+    NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:PHOTO_DISLIKE_DECREMENT,photoId]];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL
                                                            cachePolicy:NSURLRequestReloadIgnoringCacheData  timeoutInterval:10];
     
@@ -624,7 +624,7 @@ static RequestManager * sharedManager;
     
     AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     op.responseSerializer = [AFJSONResponseSerializer serializer];
-//    op.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+    op.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
     [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         NSLog(@"JSON responseObject: %@ ",responseObject);

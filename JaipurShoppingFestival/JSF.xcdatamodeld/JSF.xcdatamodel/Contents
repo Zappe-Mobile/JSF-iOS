@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5063" systemVersion="12F37" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13D65" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="AlbumImages" representedClassName="AlbumImages" syncable="YES">
         <attribute name="photoDescription" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="photoDislikes" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="photoHeading" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="photoId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photoIsDislike" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="photoIsLike" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="photoLikes" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="photoURL" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="albums" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="JSFAlbums" inverseName="albumImages" inverseEntity="JSFAlbums" syncable="YES"/>
@@ -154,7 +156,7 @@
         <relationship name="shopsCategories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ShopCategories" inverseName="shopsCategory" inverseEntity="ShopCategories" syncable="YES"/>
     </entity>
     <elements>
-        <element name="AlbumImages" positionX="18" positionY="126" width="128" height="150"/>
+        <element name="AlbumImages" positionX="18" positionY="126" width="128" height="178"/>
         <element name="AlbumVideos" positionX="36" positionY="144" width="128" height="180"/>
         <element name="EventImages" positionX="-54" positionY="63" width="128" height="118"/>
         <element name="EventPartners" positionX="-36" positionY="72" width="128" height="120"/>

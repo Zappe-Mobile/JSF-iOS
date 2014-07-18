@@ -186,4 +186,25 @@
  *  @return Array
  */
 + (NSMutableArray *)fetchAllJSFContactInfoFromCoreData;
+
+
+/**
+ *  Update Album Images Like
+ *
+ *  @param photoId Photo Id
+ *  @param status  0 OR 1
+ *  @param block   Block Returning Success OR Failure
+ */
++(void)updateAlbumImagesLikeStatusWithPhotoId:(NSString *)photoId withStatus:(NSNumber *)status withDataBlock:(DataBlock)block;
+
+
+/**
+ *  Update Album Images Dislike
+ *
+ *  @param photoId Photo Id
+ *  @param status  0 OR 1
+ *  @param block   Block Returning Success OR Failure
+ */
++(void)updateAlbumImagesDislikeStatusWithPhotoId:(NSString *)photoId withStatus:(NSNumber *)status withDataBlock:(DataBlock)block;
+
 @end

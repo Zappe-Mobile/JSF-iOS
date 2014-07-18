@@ -22,6 +22,9 @@
     __weak IBOutlet UIButton * btnPrev;
     __weak IBOutlet UIButton * btnNext;
     
+    __weak IBOutlet UILabel * lblLikes;
+    __weak IBOutlet UILabel * lblDislikes;
+    
     __weak IBOutlet UICollectionView * collectionViewGallery;
     
     NSMutableArray * arrayAlbumVideos;

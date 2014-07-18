@@ -2,7 +2,7 @@
 //  AlbumImages.h
 //  JaipurShoppingFestival
 //
-//  Created by Romi on 21/06/14.
+//  Created by Roman Khan on 7/18/14.
 //  Copyright (c) 2014 Zappe. All rights reserved.
 //
 
@@ -19,6 +19,8 @@
 @property (nonatomic, retain) NSString * photoId;
 @property (nonatomic, retain) NSString * photoLikes;
 @property (nonatomic, retain) NSString * photoURL;
+@property (nonatomic, retain) NSNumber * photoIsLike;
+@property (nonatomic, retain) NSNumber * photoIsDislike;
 @property (nonatomic, retain) JSFAlbums *albums;
 
 @end

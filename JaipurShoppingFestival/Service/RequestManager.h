@@ -108,7 +108,7 @@
  *
  *  @param block Success OR Failure
  */
-- (void)updatePhotoLikeIncrementWithCompletionBlock:(CompletionBlock)block;
+- (void)updatePhotoLikeIncrementWithPhotoId:(NSString *)photoId withCompletionBlock:(CompletionBlock)block;
 
 
 /**
@@ -116,7 +116,7 @@
  *
  *  @param block Success OR Failure
  */
-- (void)updatePhotoLikeDecrementWithCompletionBlock:(CompletionBlock)block;
+- (void)updatePhotoLikeDecrementWithPhotoId:(NSString *)photoId withCompletionBlock:(CompletionBlock)block;
 
 
 /**
@@ -124,7 +124,7 @@
  *
  *  @param block Success OR Failure
  */
-- (void)updatePhotoDislikeIncrementWithCompletionBlock:(CompletionBlock)block;
+- (void)updatePhotoDislikeIncrementWithPhotoId:(NSString *)photoId withCompletionBlock:(CompletionBlock)block;
 
 
 /**
@@ -132,7 +132,7 @@
  *
  *  @param block Success OR Failure
  */
-- (void)updatePhotoDislikeDecrementWithCompletionBlock:(CompletionBlock)block;
+- (void)updatePhotoDislikeDecrementWithPhotoId:(NSString *)photoId withCompletionBlock:(CompletionBlock)block;
 
 
 /**
