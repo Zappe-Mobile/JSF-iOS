@@ -2,7 +2,7 @@
 //  AlbumVideos.m
 //  JaipurShoppingFestival
 //
-//  Created by Romi on 21/06/14.
+//  Created by Roman Khan on 7/19/14.
 //  Copyright (c) 2014 Zappe. All rights reserved.
 //
 
@@ -20,6 +20,8 @@
 @dynamic videoLikes;
 @dynamic videoMp4URL;
 @dynamic videoYoutubeURL;
+@dynamic videoIsLike;
+@dynamic videoIsDislike;
 @dynamic albumVids;
 
 @end

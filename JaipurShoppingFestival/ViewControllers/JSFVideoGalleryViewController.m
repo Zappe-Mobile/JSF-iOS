@@ -10,6 +10,10 @@
 #import "AlbumVideos.h"
 #import "VideoCollectionViewCell.h"
 #import "UIImageView+AFNetworking.h"
+#import "Reachability.h"
+#import "SVProgressHUD.h"
+#import "RequestManager.h"
+#import "DataManager.h"
 
 @interface JSFVideoGalleryViewController ()
 {
@@ -28,6 +32,7 @@
     __weak IBOutlet UICollectionView * collectionViewGallery;
     
     NSMutableArray * arrayAlbumVideos;
+    NSInteger selectedIndex;
 
 }
 @end
@@ -52,6 +57,7 @@
 
     arrayAlbumVideos = [[NSMutableArray alloc]init];
     arrayAlbumVideos = [[_videoAlbum.albumVideos allObjects]mutableCopy];
+    selectedIndex = 0;
     
     AlbumVideos * Object = [arrayAlbumVideos objectAtIndex:0];
     
@@ -71,6 +77,9 @@
                            </html>", strVideo];
     
     [webVideo loadHTMLString:videoHTML baseURL:nil];
+    
+    lblLikes.text = Object.videoLikes;
+    lblDislikes.text = Object.videoDislikes;
 
 }
 
@@ -136,19 +145,162 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     //! No Functionality As Of Now
+    selectedIndex = indexPath.row;
     
 }
 
 
 - (IBAction)videoLikeButtonClicked:(id)sender
 {
-    
+    AlbumVideos * Object = arrayAlbumVideos[selectedIndex];
+    if ([Object.videoIsLike intValue] == 0) {
+        
+        if ([[Reachability reachabilityForInternetConnection]isReachable]) {
+            
+            [SVProgressHUD showWithStatus:@"Loading" maskType:SVProgressHUDMaskTypeBlack];
+            [[RequestManager sharedManager]updateVideoLikeIncrementWithVideoId:Object.videoId withCompletionBlock:^(BOOL result, id resultObject) {
+                
+                [SVProgressHUD dismiss];
+                if (result) {
+                    NSLog(@"%@",resultObject);
+                    lblLikes.text = [resultObject objectForKey:@"likes"];
+                    NSNumber *yourNumber = [NSNumber numberWithInt:1];
+                    [DataManager updateAlbumVideosLikeStatusWithVideoId:Object.videoId withStatus:yourNumber withDataBlock:^(BOOL success, NSError *error) {
+                        
+                        if (success) {
+                            
+                        }
+                        else {
+                            
+                        }
+                    }];
+                    
+                }
+                else {
+                    
+                }
+            }];
+        }
+        else {
+            UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Message" message:@"Internet Not Reachable.Please try Again" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            [alert show];
+
+        }
+    }
+    else {
+        
+        
+        if ([[Reachability reachabilityForInternetConnection]isReachable]) {
+            
+            [SVProgressHUD showWithStatus:@"Loading" maskType:SVProgressHUDMaskTypeBlack];
+            [[RequestManager sharedManager]updateVideoLikeDecrementWithVideoId:Object.videoId withCompletionBlock:^(BOOL result, id resultObject) {
+                
+                [SVProgressHUD dismiss];
+                if (result) {
+                    
+                    NSLog(@"%@",resultObject);
+                    lblLikes.text = [resultObject objectForKey:@"likes"];
+                    NSNumber *yourNumber = [NSNumber numberWithInt:0];
+                    [DataManager updateAlbumVideosLikeStatusWithVideoId:Object.videoId withStatus:yourNumber withDataBlock:^(BOOL success, NSError *error) {
+                        
+                        if (success) {
+                            
+                        }
+                        else {
+                            
+                        }
+                    }];
+                }
+                else {
+                    
+                }
+            }];
+        }
+        else {
+            UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Message" message:@"Internet Not Reachable.Please try Again" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            [alert show];
+
+        }
+    }
+
 }
 
 
 - (IBAction)videoDislikeButtonClicked:(id)sender
 {
-    
+    AlbumVideos * Object = arrayAlbumVideos[selectedIndex];
+    if ([Object.videoIsLike intValue] == 0) {
+        
+        if ([[Reachability reachabilityForInternetConnection]isReachable]) {
+            
+            [SVProgressHUD showWithStatus:@"Loading" maskType:SVProgressHUDMaskTypeBlack];
+            [[RequestManager sharedManager]updateVideoDislikeIncrementWithVideoId:Object.videoId withCompletionBlock:^(BOOL result, id resultObject) {
+                
+                [SVProgressHUD dismiss];
+                if (result) {
+                    
+                    lblDislikes.text = [resultObject objectForKey:@"dislikes"];
+                    NSNumber *yourNumber = [NSNumber numberWithInt:1];
+                    [DataManager updateAlbumVideosDislikeStatusWithVideoId:Object.videoId withStatus:yourNumber withDataBlock:^(BOOL success, NSError *error) {
+                        
+                        if (success) {
+                            
+                        }
+                        else {
+                            
+                        }
+                    }];
+                }
+                else {
+                    
+                }
+            }];
+             
+        }
+        else {
+            UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Message" message:@"Internet Not Reachable.Please try Again" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            [alert show];
+            
+        }
+    }
+    else {
+        
+        
+        if ([[Reachability reachabilityForInternetConnection]isReachable]) {
+            
+            [SVProgressHUD showWithStatus:@"Loading" maskType:SVProgressHUDMaskTypeBlack];
+            [[RequestManager sharedManager]updateVideoDislikeDecrementWithVideoId:Object.videoId withCompletionBlock:^(BOOL result, id resultObject) {
+                
+                [SVProgressHUD dismiss];
+                if (result) {
+                    
+                    lblDislikes.text = [resultObject objectForKey:@"dislikes"];
+                    NSNumber *yourNumber = [NSNumber numberWithInt:0];
+                    [DataManager updateAlbumVideosDislikeStatusWithVideoId:Object.videoId withStatus:yourNumber withDataBlock:^(BOOL success, NSError *error) {
+                        
+                        if (success) {
+                            
+                        }
+                        else {
+                            
+                        }
+                    }];
+
+                }
+                else {
+                    
+                }
+                
+            }];
+             
+        }
+        else {
+            UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Message" message:@"Internet Not Reachable.Please try Again" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            [alert show];
+            
+        }
+    }
+
 }
 
 - (IBAction)shareButtonClicked:(id)sender

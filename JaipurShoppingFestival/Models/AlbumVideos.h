@@ -2,7 +2,7 @@
 //  AlbumVideos.h
 //  JaipurShoppingFestival
 //
-//  Created by Romi on 21/06/14.
+//  Created by Roman Khan on 7/19/14.
 //  Copyright (c) 2014 Zappe. All rights reserved.
 //
 
@@ -21,6 +21,8 @@
 @property (nonatomic, retain) NSString * videoLikes;
 @property (nonatomic, retain) NSString * videoMp4URL;
 @property (nonatomic, retain) NSString * videoYoutubeURL;
+@property (nonatomic, retain) NSNumber * videoIsLike;
+@property (nonatomic, retain) NSNumber * videoIsDislike;
 @property (nonatomic, retain) JSFVideoAlbum *albumVids;
 
 @end

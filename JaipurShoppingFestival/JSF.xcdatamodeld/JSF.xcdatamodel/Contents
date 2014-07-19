@@ -17,6 +17,8 @@
         <attribute name="videoDislikes" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="videoHeading" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="videoId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="videoIsDislike" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="videoIsLike" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="videoLikes" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="videoMp4URL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="videoYoutubeURL" optional="YES" attributeType="String" syncable="YES"/>
@@ -157,7 +159,7 @@
     </entity>
     <elements>
         <element name="AlbumImages" positionX="18" positionY="126" width="128" height="178"/>
-        <element name="AlbumVideos" positionX="36" positionY="144" width="128" height="180"/>
+        <element name="AlbumVideos" positionX="36" positionY="144" width="128" height="210"/>
         <element name="EventImages" positionX="-54" positionY="63" width="128" height="118"/>
         <element name="EventPartners" positionX="-36" positionY="72" width="128" height="120"/>
         <element name="Events" positionX="-63" positionY="-18" width="128" height="208"/>

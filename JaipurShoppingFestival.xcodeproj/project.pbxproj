@@ -15,6 +15,7 @@
 		3018933419789900005A7E28 /* videoicon02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3018933019789900005A7E28 /* videoicon02@2x.png */; };
 		3018933519789900005A7E28 /* videoicon03@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3018933119789900005A7E28 /* videoicon03@2x.png */; };
 		3018933619789900005A7E28 /* videoicon04@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3018933219789900005A7E28 /* videoicon04@2x.png */; };
+		30CE2DA8197A22FC000B95A0 /* AlbumVideos.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CE2DA7197A22FC000B95A0 /* AlbumVideos.m */; };
 		30DECB871979805600E1E27D /* AlbumImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DECB861979805600E1E27D /* AlbumImages.m */; };
 		843B6F251955F12500A876B3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843B6F241955F12500A876B3 /* CoreData.framework */; };
 		843B6F291955F3BC00A876B3 /* JSFEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843B6F271955F3BC00A876B3 /* JSFEventsViewController.m */; };
@@ -31,7 +32,6 @@
 		843B6F601955F4A800A876B3 /* JSFHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843B6F5E1955F4A800A876B3 /* JSFHelpViewController.m */; };
 		843B6F651955F4B600A876B3 /* JSFAboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843B6F631955F4B600A876B3 /* JSFAboutUsViewController.m */; };
 		843B6F6A1955F4C700A876B3 /* JSFAboutPatrikaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843B6F681955F4C700A876B3 /* JSFAboutPatrikaViewController.m */; };
-		843B6F741955FDEC00A876B3 /* AlbumVideos.m in Sources */ = {isa = PBXBuildFile; fileRef = 843B6F731955FDEC00A876B3 /* AlbumVideos.m */; };
 		843B6F801955FE0A00A876B3 /* JSFContactInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 843B6F7F1955FE0A00A876B3 /* JSFContactInfo.m */; };
 		843B6F831955FE0A00A876B3 /* JSFPartners.m in Sources */ = {isa = PBXBuildFile; fileRef = 843B6F821955FE0A00A876B3 /* JSFPartners.m */; };
 		843B6F861955FE2700A876B3 /* JSFSponsors.m in Sources */ = {isa = PBXBuildFile; fileRef = 843B6F851955FE2700A876B3 /* JSFSponsors.m */; };
@@ -258,6 +258,8 @@
 		3018933019789900005A7E28 /* videoicon02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "videoicon02@2x.png"; sourceTree = "<group>"; };
 		3018933119789900005A7E28 /* videoicon03@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "videoicon03@2x.png"; sourceTree = "<group>"; };
 		3018933219789900005A7E28 /* videoicon04@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "videoicon04@2x.png"; sourceTree = "<group>"; };
+		30CE2DA6197A22FC000B95A0 /* AlbumVideos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumVideos.h; sourceTree = "<group>"; };
+		30CE2DA7197A22FC000B95A0 /* AlbumVideos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumVideos.m; sourceTree = "<group>"; };
 		30DECB851979805600E1E27D /* AlbumImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumImages.h; sourceTree = "<group>"; };
 		30DECB861979805600E1E27D /* AlbumImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumImages.m; sourceTree = "<group>"; };
 		843B6F231955EC1800A876B3 /* Service.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Service.h; sourceTree = "<group>"; };
@@ -290,8 +292,6 @@
 		843B6F631955F4B600A876B3 /* JSFAboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSFAboutUsViewController.m; sourceTree = "<group>"; };
 		843B6F671955F4C700A876B3 /* JSFAboutPatrikaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSFAboutPatrikaViewController.h; sourceTree = "<group>"; };
 		843B6F681955F4C700A876B3 /* JSFAboutPatrikaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSFAboutPatrikaViewController.m; sourceTree = "<group>"; };
-		843B6F721955FDEC00A876B3 /* AlbumVideos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumVideos.h; sourceTree = "<group>"; };
-		843B6F731955FDEC00A876B3 /* AlbumVideos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumVideos.m; sourceTree = "<group>"; };
 		843B6F7E1955FE0A00A876B3 /* JSFContactInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSFContactInfo.h; sourceTree = "<group>"; };
 		843B6F7F1955FE0A00A876B3 /* JSFContactInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSFContactInfo.m; sourceTree = "<group>"; };
 		843B6F811955FE0A00A876B3 /* JSFPartners.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSFPartners.h; sourceTree = "<group>"; };
@@ -1176,8 +1176,8 @@
 				B2C5AF2919719B63005B6422 /* JSFVideoAlbum.m */,
 				30DECB851979805600E1E27D /* AlbumImages.h */,
 				30DECB861979805600E1E27D /* AlbumImages.m */,
-				843B6F721955FDEC00A876B3 /* AlbumVideos.h */,
-				843B6F731955FDEC00A876B3 /* AlbumVideos.m */,
+				30CE2DA6197A22FC000B95A0 /* AlbumVideos.h */,
+				30CE2DA7197A22FC000B95A0 /* AlbumVideos.m */,
 				843B6FA21955FF9E00A876B3 /* ShopsListing.h */,
 				843B6FA31955FF9E00A876B3 /* ShopsListing.m */,
 				843B6F9F1955FF9E00A876B3 /* PlacesListing.h */,
@@ -1470,6 +1470,7 @@
 				843B6F421955F41D00A876B3 /* JSFTestimonialsViewController.m in Sources */,
 				843B6F861955FE2700A876B3 /* JSFSponsors.m in Sources */,
 				843B6F2E1955F3D100A876B3 /* JSFWhatToBuyViewController.m in Sources */,
+				30CE2DA8197A22FC000B95A0 /* AlbumVideos.m in Sources */,
 				84BDBB5119556030005D2A12 /* AFURLConnectionOperation.m in Sources */,
 				843B6F8C1955FE2800A876B3 /* JSFRafflesListing.m in Sources */,
 				84BDBB6A19556030005D2A12 /* MagicalRecord+iCloud.m in Sources */,
@@ -1494,7 +1495,6 @@
 				843B6F3D1955F40300A876B3 /* JSFRafflesViewController.m in Sources */,
 				84BDBB5F19556030005D2A12 /* NSManagedObject+MagicalRecord.m in Sources */,
 				84BDBB7119556030005D2A12 /* Reachability.m in Sources */,
-				843B6F741955FDEC00A876B3 /* AlbumVideos.m in Sources */,
 				84BDBB7319556030005D2A12 /* SVProgressHUD.m in Sources */,
 				84BDBB5B19556030005D2A12 /* NSString+MagicalDataImport.m in Sources */,
 				84BD7A351965220C00C0B912 /* Events.m in Sources */,

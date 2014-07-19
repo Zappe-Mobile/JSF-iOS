@@ -39,13 +39,13 @@
 
 #define PHOTO_DISLIKE_DECREMENT      @"http://events.patrika.com/jaipur-shopping-festival/like_dislikes.php?user=jaipurshopping&password=356751&action=usedraffles&media=images&dislike=0&id=%@"
 
-#define VIDEO_LIKE_INCREMENT         @"http://events.patrika.com/jaipur-shopping-festival/like_dislikes.php?user=jaipurshopping&password=356751&action=usedraffles&media=videos&like=1&id=1"
+#define VIDEO_LIKE_INCREMENT         @"http://events.patrika.com/jaipur-shopping-festival/like_dislikes.php?user=jaipurshopping&password=356751&action=usedraffles&media=videos&like=1&id=%@"
 
-#define VIDEO_LIKE_DECREMENT         @"http://events.patrika.com/jaipur-shopping-festival/like_dislikes.php?user=jaipurshopping&password=356751&action=usedraffles&media=videos&like=0&id=1"
+#define VIDEO_LIKE_DECREMENT         @"http://events.patrika.com/jaipur-shopping-festival/like_dislikes.php?user=jaipurshopping&password=356751&action=usedraffles&media=videos&like=0&id=%@"
 
-#define VIDEO_DISLIKE_INCREMENT      @"http://events.patrika.com/jaipur-shopping-festival/like_dislikes.php?user=jaipurshopping&password=356751&action=usedraffles&media=videos&dislike=1&id=1"
+#define VIDEO_DISLIKE_INCREMENT      @"http://events.patrika.com/jaipur-shopping-festival/like_dislikes.php?user=jaipurshopping&password=356751&action=usedraffles&media=videos&dislike=1&id=%@"
 
-#define VIDEO_DISLIKE_DECREMENT      @"http://events.patrika.com/jaipur-shopping-festival/like_dislikes.php?user=jaipurshopping&password=356751&action=usedraffles&media=videos&dislike=0&id=1"
+#define VIDEO_DISLIKE_DECREMENT      @"http://events.patrika.com/jaipur-shopping-festival/like_dislikes.php?user=jaipurshopping&password=356751&action=usedraffles&media=videos&dislike=0&id=%@"
 
 
 #endif

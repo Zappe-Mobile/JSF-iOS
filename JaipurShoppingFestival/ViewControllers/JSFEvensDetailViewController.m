@@ -95,8 +95,10 @@
     eventVenue.text = _events.eventVenue;
     eventDate.text = _events.eventStartDateTime;
     eventTime.text = _events.eventEndDateTime;
-    EventImages * Object = [arrayEventsImages objectAtIndex:0];
-    [imgEvent setImageWithURL:[NSURL URLWithString:Object.imageURL] placeholderImage:[UIImage imageNamed:@"eventbanner.jpg"]];
+    if (arrayEventsImages.count > 0) {
+        EventImages * Object = [arrayEventsImages objectAtIndex:0];
+        [imgEvent setImageWithURL:[NSURL URLWithString:Object.imageURL] placeholderImage:[UIImage imageNamed:@"eventbanner.jpg"]];
+    }
     
     imgBanner.image = [UIImage imageNamed:@"bannereffectbg.png"];
     [btnMap setImage:[UIImage imageNamed:@"mapicon"] forState:UIControlStateNormal];

@@ -207,4 +207,24 @@
  */
 +(void)updateAlbumImagesDislikeStatusWithPhotoId:(NSString *)photoId withStatus:(NSNumber *)status withDataBlock:(DataBlock)block;
 
+
+/**
+ *  Update Album Videos Like
+ *
+ *  @param videoId Video Id
+ *  @param status  0 OR 1
+ *  @param block   Block Returning Success OR Failure
+ */
++(void)updateAlbumVideosLikeStatusWithVideoId:(NSString *)videoId withStatus:(NSNumber *)status withDataBlock:(DataBlock)block;
+
+
+/**
+ *  Update Album Videos Dislike
+ *
+ *  @param videoId Video Id
+ *  @param status  0 OR 1
+ *  @param block   Block Returning Success OR Failure
+ */
++(void)updateAlbumVideosDislikeStatusWithVideoId:(NSString *)videoId withStatus:(NSNumber *)status withDataBlock:(DataBlock)block;
+
 @end

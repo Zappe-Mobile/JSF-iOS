@@ -652,11 +652,11 @@ static RequestManager * sharedManager;
  *
  *  @param block Success OR Failure
  */
-- (void)updateVideoLikeIncrementWithCompletionBlock:(CompletionBlock)block
+- (void)updateVideoLikeIncrementWithVideoId:(NSString *)videoId withCompletionBlock:(CompletionBlock)block;
 {
     self.completionBlock = block;
     
-    NSURL *URL = [NSURL URLWithString:VIDEO_LIKE_INCREMENT];
+    NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:VIDEO_LIKE_INCREMENT,videoId]];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL
                                                            cachePolicy:NSURLRequestReloadIgnoringCacheData  timeoutInterval:10];
     
@@ -664,7 +664,7 @@ static RequestManager * sharedManager;
     
     AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     op.responseSerializer = [AFJSONResponseSerializer serializer];
-//    op.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+    op.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
     [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         NSLog(@"JSON responseObject: %@ ",responseObject);
@@ -692,11 +692,11 @@ static RequestManager * sharedManager;
  *
  *  @param block Success OR Failure
  */
-- (void)updateVideoLikeDecrementWithCompletionBlock:(CompletionBlock)block
+- (void)updateVideoLikeDecrementWithVideoId:(NSString *)videoId withCompletionBlock:(CompletionBlock)block;
 {
     self.completionBlock = block;
     
-    NSURL *URL = [NSURL URLWithString:VIDEO_LIKE_DECREMENT];
+    NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:VIDEO_LIKE_DECREMENT,videoId]];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL
                                                            cachePolicy:NSURLRequestReloadIgnoringCacheData  timeoutInterval:10];
     
@@ -704,7 +704,7 @@ static RequestManager * sharedManager;
     
     AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     op.responseSerializer = [AFJSONResponseSerializer serializer];
-//    op.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+    op.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
     [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         NSLog(@"JSON responseObject: %@ ",responseObject);
@@ -732,11 +732,11 @@ static RequestManager * sharedManager;
  *
  *  @param block Success OR Failure
  */
-- (void)updateVideoDislikeIncrementWithCompletionBlock:(CompletionBlock)block
+- (void)updateVideoDislikeIncrementWithVideoId:(NSString *)videoId withCompletionBlock:(CompletionBlock)block;
 {
     self.completionBlock = block;
     
-    NSURL *URL = [NSURL URLWithString:VIDEO_DISLIKE_INCREMENT];
+    NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:VIDEO_DISLIKE_INCREMENT,videoId]];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL
                                                            cachePolicy:NSURLRequestReloadIgnoringCacheData  timeoutInterval:10];
     
@@ -744,7 +744,7 @@ static RequestManager * sharedManager;
     
     AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     op.responseSerializer = [AFJSONResponseSerializer serializer];
-//    op.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+    op.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
     [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         NSLog(@"JSON responseObject: %@ ",responseObject);
@@ -772,11 +772,11 @@ static RequestManager * sharedManager;
  *
  *  @param block Success OR Failure
  */
-- (void)updateVideoDislikeDecrementWithCompletionBlock:(CompletionBlock)block
+- (void)updateVideoDislikeDecrementWithVideoId:(NSString *)videoId withCompletionBlock:(CompletionBlock)block;
 {
     self.completionBlock = block;
     
-    NSURL *URL = [NSURL URLWithString:VIDEO_DISLIKE_DECREMENT];
+    NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:VIDEO_DISLIKE_DECREMENT,videoId]];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL
                                                            cachePolicy:NSURLRequestReloadIgnoringCacheData  timeoutInterval:10];
     
@@ -784,7 +784,7 @@ static RequestManager * sharedManager;
     
     AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     op.responseSerializer = [AFJSONResponseSerializer serializer];
-//    op.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+    op.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
     [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         NSLog(@"JSON responseObject: %@ ",responseObject);

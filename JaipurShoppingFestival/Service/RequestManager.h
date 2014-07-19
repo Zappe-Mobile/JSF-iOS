@@ -140,7 +140,7 @@
  *
  *  @param block Success OR Failure
  */
-- (void)updateVideoLikeIncrementWithCompletionBlock:(CompletionBlock)block;
+- (void)updateVideoLikeIncrementWithVideoId:(NSString *)videoId withCompletionBlock:(CompletionBlock)block;
 
 
 /**
@@ -148,7 +148,7 @@
  *
  *  @param block Success OR Failure
  */
-- (void)updateVideoLikeDecrementWithCompletionBlock:(CompletionBlock)block;
+- (void)updateVideoLikeDecrementWithVideoId:(NSString *)videoId withCompletionBlock:(CompletionBlock)block;
 
 
 /**
@@ -156,7 +156,7 @@
  *
  *  @param block Success OR Failure
  */
-- (void)updateVideoDislikeIncrementWithCompletionBlock:(CompletionBlock)block;
+- (void)updateVideoDislikeIncrementWithVideoId:(NSString *)videoId withCompletionBlock:(CompletionBlock)block;
 
 
 /**
@@ -164,6 +164,6 @@
  *
  *  @param block Success OR Failure
  */
-- (void)updateVideoDislikeDecrementWithCompletionBlock:(CompletionBlock)block;
+- (void)updateVideoDislikeDecrementWithVideoId:(NSString *)videoId withCompletionBlock:(CompletionBlock)block;
 
 @end
