@@ -1,14 +1,14 @@
 //
-//  EventDetailCollectionHeaderView.m
+//  EventDetailPartnerCollectionViewCell.m
 //  JaipurShoppingFestival
 //
-//  Created by Roman Khan on 7/13/14.
+//  Created by Roman Khan on 7/19/14.
 //  Copyright (c) 2014 Zappe. All rights reserved.
 //
 
-#import "EventDetailCollectionHeaderView.h"
+#import "EventDetailPartnerCollectionViewCell.h"
 
-@implementation EventDetailCollectionHeaderView
+@implementation EventDetailPartnerCollectionViewCell
 
 - (id)initWithFrame:(CGRect)frame
 {

@@ -2,7 +2,7 @@
 //  JSFEvensDetailViewController.m
 //  JaipurShoppingFestival
 //
-//  Created by Romi on 06/07/14.
+//  Created by Roman Khan on 06/07/14.
 //  Copyright (c) 2014 Zappe. All rights reserved.
 //
 
@@ -12,7 +12,7 @@
 #import "UIImageView+AFNetworking.h"
 #import "PartnerCollectionViewCell.h"
 #import "PartnerCollectionHeaderView.h"
-#import "EventDetailCollectionViewCell.h"
+#import "EventDetailImageCollectionViewCell.h"
 #import "EventDetailCollectionHeaderView.h"
 
 @interface HeaderTapRecognizer : UITapGestureRecognizer
@@ -49,6 +49,8 @@
     NSMutableArray *arrNumberOfRowsForSections;
     NSMutableArray *expandedSectionContent;
     NSMutableArray *collapsedSectionContent;
+    
+    NSMutableArray * arraySelectedHeaders;
 
     
 }
@@ -77,7 +79,10 @@
     eventDetailCollectionView.delegate = self;
     eventDetailCollectionView.dataSource = self;
     
-    [eventDetailCollectionView registerNib:[UINib nibWithNibName:@"EventDetailCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"EventDetailCollectionViewCell"];
+    arrNumberOfRowsForSections = [[NSMutableArray alloc]initWithObjects:@"0",@"0",@"0",nil];
+    arraySelectedHeaders = [[NSMutableArray alloc]init];
+    
+    [eventDetailCollectionView registerNib:[UINib nibWithNibName:@"EventDetailImageCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"EventDetailImageCollectionViewCell"];
     [eventDetailCollectionView registerNib:[UINib nibWithNibName:@"EventDetailCollectionHeaderView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView"];
 
     
@@ -96,7 +101,7 @@
     eventDate.text = _events.eventStartDateTime;
     eventTime.text = _events.eventEndDateTime;
     if (arrayEventsImages.count > 0) {
-        EventImages * Object = [arrayEventsImages objectAtIndex:0];
+        EventImages * Object = [arrayEventsImages objectAtIndex:1];
         [imgEvent setImageWithURL:[NSURL URLWithString:Object.imageURL] placeholderImage:[UIImage imageNamed:@"eventbanner.jpg"]];
     }
     
@@ -142,8 +147,13 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    EventDetailCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"EventDetailCollectionViewCell" forIndexPath:indexPath];
+    EventDetailImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"EventDetailImageCollectionViewCell" forIndexPath:indexPath];
     
+    if ([[arrNumberOfRowsForSections objectAtIndex:indexPath.row]isEqualToString:@"1"]) {
+        
+        [cell setupCollectionCellWithType:arraySelectedHeaders withEvent:_events];
+    }
+
     return cell;
 }
 
@@ -152,7 +162,7 @@
                   layout:(UICollectionViewLayout *)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    CGSize size = CGSizeMake(100, 100);
+    CGSize size = CGSizeMake(320, 100);
     
     return size;
 }
@@ -219,11 +229,30 @@
     HeaderTapRecognizer *htr = sender;
     NSInteger sectionNumber = htr.sectionNumber;
     NSLog(@"Header tapped for index Section %ld",(long)sectionNumber);
+        
+    
     if (![[arrNumberOfRowsForSections objectAtIndex:sectionNumber] isEqualToString:@"0"]) {
         [arrNumberOfRowsForSections replaceObjectAtIndex:sectionNumber withObject:@"0"];
+        [arraySelectedHeaders removeObject:[arraySectionHeaders objectAtIndex:sectionNumber]];
+
     } else {
         [arrNumberOfRowsForSections replaceObjectAtIndex:sectionNumber withObject:@"1"];
+        [arraySelectedHeaders addObject:[arraySectionHeaders objectAtIndex:sectionNumber]];
     }
+    
+    if (arraySelectedHeaders.count == 0) {
+        scrollBackground.contentSize = CGSizeMake(320, 595);
+    }
+    else if (arraySelectedHeaders.count == 1) {
+        scrollBackground.contentSize = CGSizeMake(320, 695);
+    }
+    else if (arraySelectedHeaders.count == 2) {
+        scrollBackground.contentSize = CGSizeMake(320, 795);
+    }
+    else if (arraySelectedHeaders.count == 3) {
+        scrollBackground.contentSize = CGSizeMake(320, 895);
+    }
+    
     [eventDetailCollectionView reloadData];
 }
 

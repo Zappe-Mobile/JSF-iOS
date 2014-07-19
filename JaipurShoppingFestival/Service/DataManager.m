@@ -44,9 +44,9 @@
     
     [dataArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         
-        Events * eventObj = [Events MR_findFirstByAttribute:@"eventId" withValue:[obj objectForKey:@"event_id"]];
-        if (!eventObj) {
-            eventObj = [Events MR_createInContext:[NSManagedObjectContext MR_defaultContext]];
+//        Events * eventObj = [Events MR_findFirstByAttribute:@"eventId" withValue:[obj objectForKey:@"event_id"]];
+//        if (!eventObj) {
+           Events * eventObj = [Events MR_createInContext:[NSManagedObjectContext MR_defaultContext]];
             
             if ([obj objectForKey:@"event_id"]!= NULL) {
                 eventObj.eventId = [obj objectForKey:@"event_id"];
@@ -198,8 +198,9 @@
             }];
 
             [eventObj setValue:eventPartnerSet forKey:@"eventsPartners"];
-        }
-    }];
+
+     
+     }];
     
     [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:block];
 

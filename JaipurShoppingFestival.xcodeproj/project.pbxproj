@@ -15,6 +15,13 @@
 		3018933419789900005A7E28 /* videoicon02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3018933019789900005A7E28 /* videoicon02@2x.png */; };
 		3018933519789900005A7E28 /* videoicon03@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3018933119789900005A7E28 /* videoicon03@2x.png */; };
 		3018933619789900005A7E28 /* videoicon04@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3018933219789900005A7E28 /* videoicon04@2x.png */; };
+		30A001C0197A3DDD0026B724 /* EventDetailCollectionViewCellItemImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30A001BF197A3DDD0026B724 /* EventDetailCollectionViewCellItemImage.xib */; };
+		30A001C2197A3DE80026B724 /* EventDetailCollectionViewCellItemPartner.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30A001C1197A3DE80026B724 /* EventDetailCollectionViewCellItemPartner.xib */; };
+		30A001C4197A3DF20026B724 /* EventDetailCollectionViewCellItemVideo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30A001C3197A3DF20026B724 /* EventDetailCollectionViewCellItemVideo.xib */; };
+		30A001C7197A5B160026B724 /* EventDetailPartnerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A001C6197A5B160026B724 /* EventDetailPartnerCollectionViewCell.m */; };
+		30A001C9197A5B230026B724 /* EventDetailPartnerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30A001C8197A5B230026B724 /* EventDetailPartnerCollectionViewCell.xib */; };
+		30A001CC197A5B3A0026B724 /* EventDetailVideoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A001CB197A5B3A0026B724 /* EventDetailVideoCollectionViewCell.m */; };
+		30A001CE197A5B440026B724 /* EventDetailVideoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30A001CD197A5B440026B724 /* EventDetailVideoCollectionViewCell.xib */; };
 		30CE2DA8197A22FC000B95A0 /* AlbumVideos.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CE2DA7197A22FC000B95A0 /* AlbumVideos.m */; };
 		30DECB871979805600E1E27D /* AlbumImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DECB861979805600E1E27D /* AlbumImages.m */; };
 		843B6F251955F12500A876B3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843B6F241955F12500A876B3 /* CoreData.framework */; };
@@ -232,8 +239,8 @@
 		B2C5AF431971AB70005B6422 /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2C5AF421971AB70005B6422 /* PhotoCollectionViewCell.xib */; };
 		B2C5AF461971ABA0005B6422 /* VideoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C5AF451971ABA0005B6422 /* VideoCollectionViewCell.m */; };
 		B2C5AF481971ABB4005B6422 /* VideoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2C5AF471971ABB4005B6422 /* VideoCollectionViewCell.xib */; };
-		B2C5AF4B19722E87005B6422 /* EventDetailCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C5AF4A19722E87005B6422 /* EventDetailCollectionViewCell.m */; };
-		B2C5AF4D19722E96005B6422 /* EventDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2C5AF4C19722E96005B6422 /* EventDetailCollectionViewCell.xib */; };
+		B2C5AF4B19722E87005B6422 /* EventDetailImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C5AF4A19722E87005B6422 /* EventDetailImageCollectionViewCell.m */; };
+		B2C5AF4D19722E96005B6422 /* EventDetailImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2C5AF4C19722E96005B6422 /* EventDetailImageCollectionViewCell.xib */; };
 		B2C5AF5319722EED005B6422 /* EventDetailCollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C5AF5219722EED005B6422 /* EventDetailCollectionHeaderView.m */; };
 		B2C5AF5519722EF9005B6422 /* EventDetailCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2C5AF5419722EF9005B6422 /* EventDetailCollectionHeaderView.xib */; };
 		B2C5AF57197233BF005B6422 /* Shop Description in Resources */ = {isa = PBXBuildFile; fileRef = B2C5AF56197233BF005B6422 /* Shop Description */; };
@@ -258,6 +265,15 @@
 		3018933019789900005A7E28 /* videoicon02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "videoicon02@2x.png"; sourceTree = "<group>"; };
 		3018933119789900005A7E28 /* videoicon03@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "videoicon03@2x.png"; sourceTree = "<group>"; };
 		3018933219789900005A7E28 /* videoicon04@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "videoicon04@2x.png"; sourceTree = "<group>"; };
+		30A001BF197A3DDD0026B724 /* EventDetailCollectionViewCellItemImage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventDetailCollectionViewCellItemImage.xib; sourceTree = "<group>"; };
+		30A001C1197A3DE80026B724 /* EventDetailCollectionViewCellItemPartner.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventDetailCollectionViewCellItemPartner.xib; sourceTree = "<group>"; };
+		30A001C3197A3DF20026B724 /* EventDetailCollectionViewCellItemVideo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventDetailCollectionViewCellItemVideo.xib; sourceTree = "<group>"; };
+		30A001C5197A5B160026B724 /* EventDetailPartnerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailPartnerCollectionViewCell.h; sourceTree = "<group>"; };
+		30A001C6197A5B160026B724 /* EventDetailPartnerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailPartnerCollectionViewCell.m; sourceTree = "<group>"; };
+		30A001C8197A5B230026B724 /* EventDetailPartnerCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventDetailPartnerCollectionViewCell.xib; sourceTree = "<group>"; };
+		30A001CA197A5B3A0026B724 /* EventDetailVideoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailVideoCollectionViewCell.h; sourceTree = "<group>"; };
+		30A001CB197A5B3A0026B724 /* EventDetailVideoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailVideoCollectionViewCell.m; sourceTree = "<group>"; };
+		30A001CD197A5B440026B724 /* EventDetailVideoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventDetailVideoCollectionViewCell.xib; sourceTree = "<group>"; };
 		30CE2DA6197A22FC000B95A0 /* AlbumVideos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumVideos.h; sourceTree = "<group>"; };
 		30CE2DA7197A22FC000B95A0 /* AlbumVideos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumVideos.m; sourceTree = "<group>"; };
 		30DECB851979805600E1E27D /* AlbumImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumImages.h; sourceTree = "<group>"; };
@@ -579,9 +595,9 @@
 		B2C5AF441971ABA0005B6422 /* VideoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoCollectionViewCell.h; sourceTree = "<group>"; };
 		B2C5AF451971ABA0005B6422 /* VideoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoCollectionViewCell.m; sourceTree = "<group>"; };
 		B2C5AF471971ABB4005B6422 /* VideoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoCollectionViewCell.xib; sourceTree = "<group>"; };
-		B2C5AF4919722E87005B6422 /* EventDetailCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailCollectionViewCell.h; sourceTree = "<group>"; };
-		B2C5AF4A19722E87005B6422 /* EventDetailCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailCollectionViewCell.m; sourceTree = "<group>"; };
-		B2C5AF4C19722E96005B6422 /* EventDetailCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventDetailCollectionViewCell.xib; sourceTree = "<group>"; };
+		B2C5AF4919722E87005B6422 /* EventDetailImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailImageCollectionViewCell.h; sourceTree = "<group>"; };
+		B2C5AF4A19722E87005B6422 /* EventDetailImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailImageCollectionViewCell.m; sourceTree = "<group>"; };
+		B2C5AF4C19722E96005B6422 /* EventDetailImageCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventDetailImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		B2C5AF5119722EED005B6422 /* EventDetailCollectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailCollectionHeaderView.h; sourceTree = "<group>"; };
 		B2C5AF5219722EED005B6422 /* EventDetailCollectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailCollectionHeaderView.m; sourceTree = "<group>"; };
 		B2C5AF5419722EF9005B6422 /* EventDetailCollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventDetailCollectionHeaderView.xib; sourceTree = "<group>"; };
@@ -1207,18 +1223,27 @@
 				B2C5AF441971ABA0005B6422 /* VideoCollectionViewCell.h */,
 				B2C5AF451971ABA0005B6422 /* VideoCollectionViewCell.m */,
 				B2C5AF471971ABB4005B6422 /* VideoCollectionViewCell.xib */,
-				B2C5AF4919722E87005B6422 /* EventDetailCollectionViewCell.h */,
-				B2C5AF4A19722E87005B6422 /* EventDetailCollectionViewCell.m */,
-				B2C5AF4C19722E96005B6422 /* EventDetailCollectionViewCell.xib */,
+				B2C5AF4919722E87005B6422 /* EventDetailImageCollectionViewCell.h */,
+				B2C5AF4A19722E87005B6422 /* EventDetailImageCollectionViewCell.m */,
+				B2C5AF4C19722E96005B6422 /* EventDetailImageCollectionViewCell.xib */,
+				30A001C5197A5B160026B724 /* EventDetailPartnerCollectionViewCell.h */,
+				30A001C6197A5B160026B724 /* EventDetailPartnerCollectionViewCell.m */,
+				30A001C8197A5B230026B724 /* EventDetailPartnerCollectionViewCell.xib */,
+				30A001CA197A5B3A0026B724 /* EventDetailVideoCollectionViewCell.h */,
+				30A001CB197A5B3A0026B724 /* EventDetailVideoCollectionViewCell.m */,
+				30A001CD197A5B440026B724 /* EventDetailVideoCollectionViewCell.xib */,
 				B2C5AF5119722EED005B6422 /* EventDetailCollectionHeaderView.h */,
 				B2C5AF5219722EED005B6422 /* EventDetailCollectionHeaderView.m */,
 				B2C5AF5419722EF9005B6422 /* EventDetailCollectionHeaderView.xib */,
 				9C09141619793E930037B8A5 /* EventDetailCollectionViewCellItemImage.h */,
 				9C09141719793E930037B8A5 /* EventDetailCollectionViewCellItemImage.m */,
+				30A001BF197A3DDD0026B724 /* EventDetailCollectionViewCellItemImage.xib */,
 				9C09141919793EB40037B8A5 /* EventDetailCollectionViewCellItemPartner.h */,
 				9C09141A19793EB40037B8A5 /* EventDetailCollectionViewCellItemPartner.m */,
+				30A001C1197A3DE80026B724 /* EventDetailCollectionViewCellItemPartner.xib */,
 				9C09141C19793EC80037B8A5 /* EventDetailCollectionViewCellItemVideo.h */,
 				9C09141D19793EC80037B8A5 /* EventDetailCollectionViewCellItemVideo.m */,
+				30A001C3197A3DF20026B724 /* EventDetailCollectionViewCellItemVideo.xib */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -1334,11 +1359,13 @@
 				84D059B1196AB8CF00D03E82 /* PartnerCollectionHeaderView.xib in Resources */,
 				84F5D86719686DD1006A7E3B /* deshicon12.png in Resources */,
 				84F5D87C19686DD1006A7E3B /* select_deshicon08@2x.png in Resources */,
-				B2C5AF4D19722E96005B6422 /* EventDetailCollectionViewCell.xib in Resources */,
+				B2C5AF4D19722E96005B6422 /* EventDetailImageCollectionViewCell.xib in Resources */,
 				B2C5AF391971A7B6005B6422 /* JSFPhotoGalleryViewController.xib in Resources */,
+				30A001CE197A5B440026B724 /* EventDetailVideoCollectionViewCell.xib in Resources */,
 				84F5D86919686DD1006A7E3B /* deshicon13.png in Resources */,
 				84F5D8C919694813006A7E3B /* JSFSponsorsViewController.xib in Resources */,
 				84F5D8C719694813006A7E3B /* JSFRafflesViewController.xib in Resources */,
+				30A001C9197A5B230026B724 /* EventDetailPartnerCollectionViewCell.xib in Resources */,
 				84F5D8C519694813006A7E3B /* JSFPartnersViewController.xib in Resources */,
 				84F5D85D19686DD1006A7E3B /* deshicon07.png in Resources */,
 				84F5D87419686DD1006A7E3B /* select_deshicon04@2x.png in Resources */,
@@ -1363,6 +1390,7 @@
 				84BD7A611965E22400C0B912 /* regbg.jpg in Resources */,
 				84F5D86E19686DD1006A7E3B /* select_deshicon01@2x.png in Resources */,
 				84F5D88619686DD1006A7E3B /* select_deshicon13@2x.png in Resources */,
+				30A001C0197A3DDD0026B724 /* EventDetailCollectionViewCellItemImage.xib in Resources */,
 				84F5D8BF19694813006A7E3B /* JSFEvensDetailViewController.xib in Resources */,
 				84F5D89319688179006A7E3B /* eventselectbg.jpg in Resources */,
 				84F5D85919686DD1006A7E3B /* deshicon05.png in Resources */,
@@ -1408,6 +1436,7 @@
 				84F5D88519686DD1006A7E3B /* select_deshicon13.png in Resources */,
 				84F5D8CB19694813006A7E3B /* JSFVideoAlbumsViewController.xib in Resources */,
 				84F5D88419686DD1006A7E3B /* select_deshicon12@2x.png in Resources */,
+				30A001C4197A3DF20026B724 /* EventDetailCollectionViewCellItemVideo.xib in Resources */,
 				B2C5AF481971ABB4005B6422 /* VideoCollectionViewCell.xib in Resources */,
 				84F5D8C219694813006A7E3B /* JSFHomeViewController.xib in Resources */,
 				84F5D85419686DD1006A7E3B /* deshicon02@2x.png in Resources */,
@@ -1440,6 +1469,7 @@
 				84BD7A671965E22400C0B912 /* topdeshwithtxt@2x.jpg in Resources */,
 				84BD7A681965E22400C0B912 /* userbg.png in Resources */,
 				84F5D85119686DD1006A7E3B /* deshicon01.png in Resources */,
+				30A001C2197A3DE80026B724 /* EventDetailCollectionViewCellItemPartner.xib in Resources */,
 				84BD7A661965E22400C0B912 /* topdeshwithtxt.jpg in Resources */,
 				84D059CD196B1E0800D03E82 /* WhereToBuyCell.xib in Resources */,
 				84F5D85219686DD1006A7E3B /* deshicon01@2x.png in Resources */,
@@ -1473,6 +1503,7 @@
 				30CE2DA8197A22FC000B95A0 /* AlbumVideos.m in Sources */,
 				84BDBB5119556030005D2A12 /* AFURLConnectionOperation.m in Sources */,
 				843B6F8C1955FE2800A876B3 /* JSFRafflesListing.m in Sources */,
+				30A001CC197A5B3A0026B724 /* EventDetailVideoCollectionViewCell.m in Sources */,
 				84BDBB6A19556030005D2A12 /* MagicalRecord+iCloud.m in Sources */,
 				84BDBB5A19556030005D2A12 /* NSRelationshipDescription+MagicalDataImport.m in Sources */,
 				84BDBB4C19556030005D2A12 /* AFHTTPRequestOperation.m in Sources */,
@@ -1506,7 +1537,7 @@
 				84BCFF331970437000D08D81 /* JSFWhereToBuyDetailViewController.m in Sources */,
 				84BDBAE219555EE0005D2A12 /* RequestManager.m in Sources */,
 				843B6F8F1955FE2800A876B3 /* JSFTestimonials.m in Sources */,
-				B2C5AF4B19722E87005B6422 /* EventDetailCollectionViewCell.m in Sources */,
+				B2C5AF4B19722E87005B6422 /* EventDetailImageCollectionViewCell.m in Sources */,
 				8472988A196FF94A00094668 /* JSFAlbums.m in Sources */,
 				B2C5AF2A19719B63005B6422 /* JSFVideoAlbum.m in Sources */,
 				30DECB871979805600E1E27D /* AlbumImages.m in Sources */,
@@ -1558,6 +1589,7 @@
 				843B6F891955FE2800A876B3 /* JSFUsedRafflesListing.m in Sources */,
 				84BDBB7A1955615E005D2A12 /* JSF.xcdatamodeld in Sources */,
 				84BDBB5C19556030005D2A12 /* NSManagedObject+MagicalAggregation.m in Sources */,
+				30A001C7197A5B160026B724 /* EventDetailPartnerCollectionViewCell.m in Sources */,
 				B2C5AF2E19719C6B005B6422 /* MediaCell.m in Sources */,
 				84BDBB5719556030005D2A12 /* NSEntityDescription+MagicalDataImport.m in Sources */,
 				84BDBB4E19556030005D2A12 /* AFHTTPSessionManager.m in Sources */,

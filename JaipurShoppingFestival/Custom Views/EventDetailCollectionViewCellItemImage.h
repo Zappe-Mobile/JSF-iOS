@@ -10,4 +10,5 @@
 
 @interface EventDetailCollectionViewCellItemImage : UICollectionViewCell
 
+@property (nonatomic, strong) IBOutlet UIImageView * imgEvent;
 @end

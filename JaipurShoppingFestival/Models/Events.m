@@ -2,7 +2,7 @@
 //  Events.m
 //  JaipurShoppingFestival
 //
-//  Created by Romi on 03/07/14.
+//  Created by Roman Khan on 03/07/14.
 //  Copyright (c) 2014 Zappe. All rights reserved.
 //
 
