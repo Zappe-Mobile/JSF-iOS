@@ -7,6 +7,22 @@
 //
 
 #import "EventDetailPartnerCollectionViewCell.h"
+#import "EventDetailCollectionViewCellItemPartner.h"
+#import "Events.h"
+#import "EventPartners.h"
+
+@interface EventDetailPartnerCollectionViewCell () <UICollectionViewDataSource,UICollectionViewDelegate>
+{
+    IBOutlet UICollectionView * eventsDetailCollectionView;
+    
+    NSMutableArray * arrayEventPartners;
+    
+    NSMutableArray * arrayPartnerImageURL;
+    
+    
+    
+}
+@end
 
 @implementation EventDetailPartnerCollectionViewCell
 
@@ -19,13 +35,72 @@
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
+- (void)awakeFromNib
 {
-    // Drawing code
+    arrayEventPartners = [[NSMutableArray alloc]init];
+    
+    arrayPartnerImageURL = [[NSMutableArray alloc]init];
+    
+    
+    eventsDetailCollectionView.delegate = self;
+    eventsDetailCollectionView.dataSource = self;
+    
+    [eventsDetailCollectionView registerNib:[UINib nibWithNibName:@"EventDetailCollectionViewCellItemPartner" bundle:nil] forCellWithReuseIdentifier:@"EventDetailCollectionViewCellItemPartner"];
+    
+    
 }
-*/
+
+- (void)setupCollectionCellWithEvent:(Events *)Object
+{
+    
+    arrayEventPartners = [[Object.eventsPartners allObjects]mutableCopy];
+    
+    for (EventPartners * Object in arrayEventPartners) {
+        [arrayPartnerImageURL addObject:Object.partnerLogo];
+    }
+    
+    NSLog(@"%@",arrayPartnerImageURL);
+    
+    [eventsDetailCollectionView reloadData];
+}
+
+#pragma mark - UICollectionViewDataSource methods
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    
+    return [arrayPartnerImageURL count];
+    
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    EventDetailCollectionViewCellItemPartner *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"EventDetailCollectionViewCellItemPartner" forIndexPath:indexPath];
+    
+    //  EventImages * Object = [arrayEventImages objectAtIndex:indexPath.row];
+    //[cell.imgEvent setImageWithURL:[NSURL URLWithString:[arrayEventImageURL objectAtIndex:indexPath.row]] placeholderImage:[UIImage imageNamed:@"eventbanner.jpg"]];
+    
+    
+    return cell;
+}
+
+
+- (CGSize)collectionView:(UICollectionView *)collectionView
+                  layout:(UICollectionViewLayout *)collectionViewLayout
+  sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    CGSize size = CGSizeMake(100, 100);
+    
+    return size;
+}
+
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    //! No Functionality As Of Now
+    
+}
 
 @end

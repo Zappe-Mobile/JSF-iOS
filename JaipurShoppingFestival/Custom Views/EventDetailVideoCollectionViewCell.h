@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class Events;
 @interface EventDetailVideoCollectionViewCell : UICollectionViewCell
 
+- (void)setupCollectionCellWithEvent:(Events *)Object;
 @end

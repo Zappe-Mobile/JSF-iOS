@@ -55,35 +55,17 @@
     eventsDetailCollectionView.dataSource = self;
     
     [eventsDetailCollectionView registerNib:[UINib nibWithNibName:@"EventDetailCollectionViewCellItemImage" bundle:nil] forCellWithReuseIdentifier:@"EventDetailCollectionViewCellItemImage"];
-    [eventsDetailCollectionView registerNib:[UINib nibWithNibName:@"EventDetailCollectionViewCellItemPartner" bundle:nil] forCellWithReuseIdentifier:@"EventDetailCollectionViewCellItemPartner"];
-    [eventsDetailCollectionView registerNib:[UINib nibWithNibName:@"EventDetailCollectionViewCellItemVideo" bundle:nil] forCellWithReuseIdentifier:@"EventDetailCollectionViewCellItemVideo"];
   
 
 }
 
-- (void)setupCollectionCellWithType:(NSMutableArray *)typeArray withEvent:(Events *)Object
+- (void)setupCollectionCellWithEvent:(Events *)Object
 {
-    detailTypeArray = typeArray;
     
-    NSLog(@"%@",typeArray);
-    for (NSString * String in typeArray) {
-        
-        if ([String isEqualToString:@"Event Videos"]) {
+    arrayEventImages = [[Object.eventsImages allObjects]mutableCopy];
             
-            [arrayEventVideos addObject:[[Object.eventsImages allObjects]mutableCopy]];
-        }
-        else if ([String isEqualToString:@"Event Images"]) {
-            
-            arrayEventImages = [[Object.eventsImages allObjects]mutableCopy];
-            
-            for (EventImages * Object in arrayEventImages) {
-                [arrayEventImageURL addObject:Object.imageURL];
-            }
-        }
-        else if ([String isEqualToString:@"Event Partners"]) {
-            
-            [arrayEventPartners addObject:[[Object.eventsPartners allObjects]mutableCopy]];
-        }
+    for (EventImages * Object in arrayEventImages) {
+        [arrayEventImageURL addObject:Object.imageURL];
     }
     
     NSLog(@"%@",arrayEventImageURL);
@@ -104,40 +86,13 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell * collectionCell = nil;
-    
-    if ([detailTypeArray containsObject:@"Event Images"]) {
+    EventDetailCollectionViewCellItemImage *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"EventDetailCollectionViewCellItemImage" forIndexPath:indexPath];
         
-        EventDetailCollectionViewCellItemImage *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"EventDetailCollectionViewCellItemImage" forIndexPath:indexPath];
-        
-//        EventImages * Object = [arrayEventImages objectAtIndex:indexPath.row];
-         [cell.imgEvent setImageWithURL:[NSURL URLWithString:[arrayEventImageURL objectAtIndex:indexPath.row]] placeholderImage:[UIImage imageNamed:@"eventbanner.jpg"]];
+//  EventImages * Object = [arrayEventImages objectAtIndex:indexPath.row];
+    [cell.imgEvent setImageWithURL:[NSURL URLWithString:[arrayEventImageURL objectAtIndex:indexPath.row]] placeholderImage:[UIImage imageNamed:@"eventbanner.jpg"]];
 
-        collectionCell = cell;
 
-    }
-    
-    if ([detailTypeArray containsObject:@"Event Videos"]) {
-        
-        EventDetailCollectionViewCellItemVideo *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"EventDetailCollectionViewCellItemVideo" forIndexPath:indexPath];
-        
-        
-        collectionCell = cell;
-        
-    }
-
-    if ([detailTypeArray containsObject:@"Event Partners"]) {
-        
-        EventDetailCollectionViewCellItemPartner *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"EventDetailCollectionViewCellItemPartner" forIndexPath:indexPath];
-        
-        
-        collectionCell = cell;
-        
-    }
-
-    
-    
-    return collectionCell;
+    return cell;
 }
 
 

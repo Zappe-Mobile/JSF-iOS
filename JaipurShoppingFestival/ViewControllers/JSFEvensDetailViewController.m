@@ -13,6 +13,8 @@
 #import "PartnerCollectionViewCell.h"
 #import "PartnerCollectionHeaderView.h"
 #import "EventDetailImageCollectionViewCell.h"
+#import "EventDetailVideoCollectionViewCell.h"
+#import "EventDetailPartnerCollectionViewCell.h"
 #import "EventDetailCollectionHeaderView.h"
 
 @interface HeaderTapRecognizer : UITapGestureRecognizer
@@ -51,6 +53,8 @@
     NSMutableArray *collapsedSectionContent;
     
     NSMutableArray * arraySelectedHeaders;
+    
+    BOOL isImageSetup;
 
     
 }
@@ -83,16 +87,15 @@
     arraySelectedHeaders = [[NSMutableArray alloc]init];
     
     [eventDetailCollectionView registerNib:[UINib nibWithNibName:@"EventDetailImageCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"EventDetailImageCollectionViewCell"];
+    [eventDetailCollectionView registerNib:[UINib nibWithNibName:@"EventDetailVideoCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"EventDetailVideoCollectionViewCell"];
+    [eventDetailCollectionView registerNib:[UINib nibWithNibName:@"EventDetailPartnerCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"EventDetailPartnerCollectionViewCell"];
     [eventDetailCollectionView registerNib:[UINib nibWithNibName:@"EventDetailCollectionHeaderView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView"];
 
     
     arrayEventsImages = [[NSMutableArray alloc]init];
     arrayEventsImages = [[_events.eventsImages allObjects]mutableCopy];
     
-    arraySectionHeaders = [[NSMutableArray alloc]
-                           initWithObjects:@"Event Images",
-                                        @"Event Partners",
-                                        @"Event Videos",nil];
+    arraySectionHeaders = [[NSMutableArray alloc]initWithObjects:@"Event Images",@"Event Partners",@"Event Videos",nil];
     
     eventName.text = _events.eventName;
     txtEventDescription.text = _events.eventDescription;
@@ -108,7 +111,7 @@
     imgBanner.image = [UIImage imageNamed:@"bannereffectbg.png"];
     [btnMap setImage:[UIImage imageNamed:@"mapicon"] forState:UIControlStateNormal];
     
-    
+    isImageSetup = NO;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -147,14 +150,50 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    EventDetailImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"EventDetailImageCollectionViewCell" forIndexPath:indexPath];
     
-    if ([[arrNumberOfRowsForSections objectAtIndex:indexPath.row]isEqualToString:@"1"]) {
+    UICollectionViewCell * collectionCell = nil;
+    
+    if ([arraySelectedHeaders containsObject:@"Event Images"] && !isImageSetup) {
         
-        [cell setupCollectionCellWithType:arraySelectedHeaders withEvent:_events];
+        EventDetailImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"EventDetailImageCollectionViewCell" forIndexPath:indexPath];
+        
+        [cell setupCollectionCellWithEvent:_events];
+        
+        isImageSetup = YES;
+        
+        collectionCell = cell;
+        
+        return cell;
+
+    }
+    
+    if ([arraySelectedHeaders containsObject:@"Event Videos"]) {
+        
+        EventDetailVideoCollectionViewCell *cell1 = [collectionView dequeueReusableCellWithReuseIdentifier:@"EventDetailVideoCollectionViewCell" forIndexPath:indexPath];
+        
+        //[cell setupCollectionCellWithType:arraySelectedHeaders withEvent:_events];
+        
+        collectionCell = cell1;
+        
+        return cell1;
+        
     }
 
-    return cell;
+    if ([arraySelectedHeaders containsObject:@"Event Partners"]) {
+        
+        EventDetailPartnerCollectionViewCell *cell2 = [collectionView dequeueReusableCellWithReuseIdentifier:@"EventDetailPartnerCollectionViewCell" forIndexPath:indexPath];
+        
+        //[cell setupCollectionCellWithType:arraySelectedHeaders withEvent:_events];
+        
+        collectionCell = cell2;
+        
+        return cell2;
+        
+    }
+
+    
+
+    return 0;
 }
 
 

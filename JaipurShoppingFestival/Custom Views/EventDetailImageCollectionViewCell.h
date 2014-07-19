@@ -11,5 +11,5 @@
 @class Events;
 @interface EventDetailImageCollectionViewCell : UICollectionViewCell
 
-- (void)setupCollectionCellWithType:(NSMutableArray *)typeArray withEvent:(Events *)Object;
+- (void)setupCollectionCellWithEvent:(Events *)Object;
 @end
