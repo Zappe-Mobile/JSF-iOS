@@ -9,6 +9,8 @@
 #ifndef JaipurShoppingFestival_Service_h
 #define JaipurShoppingFestival_Service_h
 
+#define MASTER_FEED                  @"http://events.patrika.com/jaipur-shopping-festival/json-master-feed.php?user=jaipurpatrika&password=356751"
+
 #define EVENTS_LISTING               @"http://events.patrika.com/jaipur-shopping-festival/json-feed.php?user=jaipurshopping&password=356751&action=events"
 
 #define PLACES_LISTING               @"http://events.patrika.com/jaipur-shopping-festival/json-feed.php?user=jaipurshopping&password=356751&action=places"

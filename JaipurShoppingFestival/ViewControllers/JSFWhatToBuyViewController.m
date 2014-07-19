@@ -9,7 +9,16 @@
 #import "JSFWhatToBuyViewController.h"
 
 @interface JSFWhatToBuyViewController ()
-
+{
+    __weak IBOutlet UIView * viewArea;
+    __weak IBOutlet UIView * viewCategory;
+    
+    __weak IBOutlet UIButton * btnArea;
+    __weak IBOutlet UIButton * btnCategory;
+    
+    __weak IBOutlet UITableView * tblView;
+    
+}
 @end
 
 @implementation JSFWhatToBuyViewController
@@ -50,6 +59,15 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (IBAction)btnAreaClicked:(id)sender
+{
+    
+}
+
+- (IBAction)btnCategoryClicked:(id)sender
+{
+    
+}
 
 - (void)didReceiveMemoryWarning
 {

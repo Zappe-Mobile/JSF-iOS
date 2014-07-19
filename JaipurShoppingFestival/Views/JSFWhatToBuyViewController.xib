@@ -6,7 +6,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JSFWhatToBuyViewController">
             <connections>
+                <outlet property="btnArea" destination="FCt-SC-WWc" id="l9M-q2-LwG"/>
+                <outlet property="btnCategory" destination="NjV-nu-S4r" id="iX8-u5-Dga"/>
+                <outlet property="tblView" destination="cZL-Rq-ssS" id="76R-Zp-lSy"/>
                 <outlet property="view" destination="Miq-EN-9G1" id="lFU-hG-UaF"/>
+                <outlet property="viewArea" destination="UQd-y2-QLl" id="Ej9-MI-bu3"/>
+                <outlet property="viewCategory" destination="bkY-91-weP" id="Oxq-GW-etU"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -22,7 +27,7 @@
                     <rect key="frame" x="0.0" y="29" width="320" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What To Buy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xgm-YR-Ntd">
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What To Shop" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xgm-YR-Ntd">
                             <rect key="frame" x="73" y="4" width="175" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
@@ -55,13 +60,68 @@
                         <action selector="homeButtonClicked:" destination="-1" eventType="touchUpInside" id="jLF-oI-Rhg"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" id="UQd-y2-QLl">
+                    <rect key="frame" x="0.0" y="59" width="160" height="85"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="FCt-SC-WWc">
+                            <rect key="frame" x="0.0" y="0.0" width="160" height="85"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                            <inset key="titleEdgeInsets" minX="-25" minY="40" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="45" minY="-25" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="AREA" image="areaicon.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="btnAreaClicked:" destination="-1" eventType="touchUpInside" id="JfB-rK-b7a"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.38431372549999998" green="0.0" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" id="bkY-91-weP">
+                    <rect key="frame" x="160" y="59" width="160" height="85"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NjV-nu-S4r">
+                            <rect key="frame" x="0.0" y="0.0" width="160" height="85"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                            <inset key="titleEdgeInsets" minX="-25" minY="40" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="61" minY="-30" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="CATEGORY" image="categroyicon.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="btnCategoryClicked:" destination="-1" eventType="touchUpInside" id="iXB-59-M7M"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.68235294120000001" green="0.066666666669999999" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="cZL-Rq-ssS">
+                    <rect key="frame" x="0.0" y="144" width="320" height="424"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="9x6-Ne-yxn"/>
+                        <outlet property="delegate" destination="-1" id="IwW-Y6-lPJ"/>
+                    </connections>
+                </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
     <resources>
+        <image name="areaicon.png" width="32" height="30"/>
         <image name="back.png" width="20" height="20"/>
+        <image name="categroyicon.png" width="31" height="27"/>
         <image name="dashboard_bg.jpg" width="640" height="1136"/>
         <image name="home.png" width="25" height="25"/>
     </resources>
