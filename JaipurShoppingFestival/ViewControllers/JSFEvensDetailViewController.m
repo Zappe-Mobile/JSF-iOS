@@ -41,6 +41,8 @@
     __weak IBOutlet UICollectionView * eventDetailCollectionView;
     
     NSMutableArray * arrayEventsImages;
+    NSMutableArray * arrayEventsPartners;
+    NSMutableArray * arrayEventsVideos;
     
     NSMutableArray * arraySectionHeaders;
     
@@ -95,7 +97,27 @@
     arrayEventsImages = [[NSMutableArray alloc]init];
     arrayEventsImages = [[_events.eventsImages allObjects]mutableCopy];
     
-    arraySectionHeaders = [[NSMutableArray alloc]initWithObjects:@"Event Images",@"Event Partners",@"Event Videos",nil];
+    arrayEventsPartners = [[NSMutableArray alloc]init];
+    arrayEventsPartners = [[_events.eventsPartners allObjects]mutableCopy];
+    
+    arrayEventsVideos = [[NSMutableArray alloc]init];
+    arrayEventsVideos = [[_events.eventsPartners allObjects]mutableCopy];
+    
+    arraySectionHeaders = [[NSMutableArray alloc]init]; //WithObjects:@"Event Images",@"Event Partners",@"Event Videos",nil];
+    
+    if (arrayEventsImages.count > 0) {
+        [arraySectionHeaders addObject:@"Event Images"];
+    }
+    
+    if (arrayEventsPartners.count > 0) {
+        [arraySectionHeaders addObject:@"Event Partners"];
+    }
+    
+    if (arrayEventsVideos.count > 0) {
+        [arraySectionHeaders addObject:@"Event Videos"];
+    }
+
+    NSLog(@"%@",arraySectionHeaders);
     
     eventName.text = _events.eventName;
     txtEventDescription.text = _events.eventDescription;
@@ -136,7 +158,7 @@
 
 #pragma mark - UICollectionViewDataSource methods
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 3;
+    return [arraySectionHeaders count];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
