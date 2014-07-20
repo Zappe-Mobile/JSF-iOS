@@ -166,16 +166,7 @@
 {
     whatToShopLabel.textColor = [UIColor colorWithRed:163.0f/255.0f green:44.0f/255.0f blue:103.0f/255.0f alpha:1.0];
     [whatToShopButton setImage:[UIImage imageNamed:@"select_deshicon03"] forState:UIControlStateNormal];
-
-    JSFWhatToBuyViewController * whatToBuyObj = [[JSFWhatToBuyViewController alloc]init];
-    [self.navigationController pushViewController:whatToBuyObj animated:YES];
-}
-
-- (IBAction)shopsButtonClicked:(id)sender
-{
-    shopsLabel.textColor = [UIColor colorWithRed:163.0f/255.0f green:44.0f/255.0f blue:103.0f/255.0f alpha:1.0];
-    [shopsButton setImage:[UIImage imageNamed:@"select_deshicon04"] forState:UIControlStateNormal];
-
+    
     if ([[Reachability reachabilityForInternetConnection]isReachable]) {
         
         [SVProgressHUD showWithStatus:@"Loading" maskType:SVProgressHUDMaskTypeBlack];
@@ -188,9 +179,9 @@
                     
                     if (success) {
                         
-                        JSFShopsViewController * shopsObj = [[JSFShopsViewController alloc]init];
-                        [self.navigationController pushViewController:shopsObj animated:YES];
-
+                        JSFWhatToBuyViewController * whatToBuyObj = [[JSFWhatToBuyViewController alloc]init];
+                        [self.navigationController pushViewController:whatToBuyObj animated:YES];
+                        
                     }
                     else {
                         
@@ -207,7 +198,16 @@
         UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Message" message:@"Internet Not Reachable.Please try Again" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
         [alert show];
     }
+
+
 }
+
+- (IBAction)shopsButtonClicked:(id)sender
+{
+    shopsLabel.textColor = [UIColor colorWithRed:163.0f/255.0f green:44.0f/255.0f blue:103.0f/255.0f alpha:1.0];
+    [shopsButton setImage:[UIImage imageNamed:@"select_deshicon04"] forState:UIControlStateNormal];
+
+ }
 
 - (IBAction)rafflesButtonClicked:(id)sender
 {

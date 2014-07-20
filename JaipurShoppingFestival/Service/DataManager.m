@@ -322,6 +322,10 @@
 {
     NSLog(@"%@",dataArray);
     
+    for (ShopsListing * Object in [DataManager fetchAllShopsListingFromCoreData]) {
+        [Object MR_deleteEntity];
+    }
+    
     [dataArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         
         ShopsListing * shopObj = [ShopsListing MR_findFirstByAttribute:@"shopId" withValue:[obj objectForKey:@"shop_id"]];

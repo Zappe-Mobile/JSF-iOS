@@ -22,7 +22,6 @@
 		30A001C9197A5B230026B724 /* EventDetailPartnerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30A001C8197A5B230026B724 /* EventDetailPartnerCollectionViewCell.xib */; };
 		30A001CC197A5B3A0026B724 /* EventDetailVideoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A001CB197A5B3A0026B724 /* EventDetailVideoCollectionViewCell.m */; };
 		30A001CE197A5B440026B724 /* EventDetailVideoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30A001CD197A5B440026B724 /* EventDetailVideoCollectionViewCell.xib */; };
-		30B775E4197A7A7C005A2A62 /* adressareaicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 30B775DE197A7A7C005A2A62 /* adressareaicon.png */; };
 		30B775E6197A7A7C005A2A62 /* callicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 30B775E0197A7A7C005A2A62 /* callicon.png */; };
 		30B775E8197A7A7C005A2A62 /* contacticon.png in Resources */ = {isa = PBXBuildFile; fileRef = 30B775E2197A7A7C005A2A62 /* contacticon.png */; };
 		30B775E9197A7A7C005A2A62 /* shopimg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30B775E3197A7A7C005A2A62 /* shopimg.jpg */; };
@@ -30,6 +29,9 @@
 		30B775ED197A7C9C005A2A62 /* categroyicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30B775EB197A7C9C005A2A62 /* categroyicon@2x.png */; };
 		30CE2DA8197A22FC000B95A0 /* AlbumVideos.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CE2DA7197A22FC000B95A0 /* AlbumVideos.m */; };
 		30DECB871979805600E1E27D /* AlbumImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DECB861979805600E1E27D /* AlbumImages.m */; };
+		30FA837C197B9D9C003D91FB /* WhatToShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FA837A197B9D9C003D91FB /* WhatToShopCell.m */; };
+		30FA837D197B9D9C003D91FB /* WhatToShopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30FA837B197B9D9C003D91FB /* WhatToShopCell.xib */; };
+		30FA837F197BA077003D91FB /* adressareaicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30FA837E197BA077003D91FB /* adressareaicon@2x.png */; };
 		843B6F251955F12500A876B3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843B6F241955F12500A876B3 /* CoreData.framework */; };
 		843B6F291955F3BC00A876B3 /* JSFEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843B6F271955F3BC00A876B3 /* JSFEventsViewController.m */; };
 		843B6F2E1955F3D100A876B3 /* JSFWhatToBuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843B6F2C1955F3D100A876B3 /* JSFWhatToBuyViewController.m */; };
@@ -280,7 +282,6 @@
 		30A001CA197A5B3A0026B724 /* EventDetailVideoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailVideoCollectionViewCell.h; sourceTree = "<group>"; };
 		30A001CB197A5B3A0026B724 /* EventDetailVideoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailVideoCollectionViewCell.m; sourceTree = "<group>"; };
 		30A001CD197A5B440026B724 /* EventDetailVideoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventDetailVideoCollectionViewCell.xib; sourceTree = "<group>"; };
-		30B775DE197A7A7C005A2A62 /* adressareaicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adressareaicon.png; sourceTree = "<group>"; };
 		30B775E0197A7A7C005A2A62 /* callicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = callicon.png; sourceTree = "<group>"; };
 		30B775E2197A7A7C005A2A62 /* contacticon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contacticon.png; sourceTree = "<group>"; };
 		30B775E3197A7A7C005A2A62 /* shopimg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shopimg.jpg; sourceTree = "<group>"; };
@@ -290,6 +291,10 @@
 		30CE2DA7197A22FC000B95A0 /* AlbumVideos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumVideos.m; sourceTree = "<group>"; };
 		30DECB851979805600E1E27D /* AlbumImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumImages.h; sourceTree = "<group>"; };
 		30DECB861979805600E1E27D /* AlbumImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumImages.m; sourceTree = "<group>"; };
+		30FA8379197B9D9C003D91FB /* WhatToShopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhatToShopCell.h; sourceTree = "<group>"; };
+		30FA837A197B9D9C003D91FB /* WhatToShopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhatToShopCell.m; sourceTree = "<group>"; };
+		30FA837B197B9D9C003D91FB /* WhatToShopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhatToShopCell.xib; sourceTree = "<group>"; };
+		30FA837E197BA077003D91FB /* adressareaicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "adressareaicon@2x.png"; sourceTree = "<group>"; };
 		843B6F231955EC1800A876B3 /* Service.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Service.h; sourceTree = "<group>"; };
 		843B6F241955F12500A876B3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		843B6F261955F3BC00A876B3 /* JSFEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSFEventsViewController.h; sourceTree = "<group>"; };
@@ -657,9 +662,9 @@
 		30B775DD197A7A7C005A2A62 /* What to Shop */ = {
 			isa = PBXGroup;
 			children = (
+				30FA837E197BA077003D91FB /* adressareaicon@2x.png */,
 				30B775EA197A7C9C005A2A62 /* areaicon@2x.png */,
 				30B775EB197A7C9C005A2A62 /* categroyicon@2x.png */,
-				30B775DE197A7A7C005A2A62 /* adressareaicon.png */,
 				30B775E0197A7A7C005A2A62 /* callicon.png */,
 				30B775E2197A7A7C005A2A62 /* contacticon.png */,
 				30B775E3197A7A7C005A2A62 /* shopimg.jpg */,
@@ -1298,6 +1303,9 @@
 				B2C5AF2B19719C6B005B6422 /* MediaCell.h */,
 				B2C5AF2C19719C6B005B6422 /* MediaCell.m */,
 				B2C5AF2D19719C6B005B6422 /* MediaCell.xib */,
+				30FA8379197B9D9C003D91FB /* WhatToShopCell.h */,
+				30FA837A197B9D9C003D91FB /* WhatToShopCell.m */,
+				30FA837B197B9D9C003D91FB /* WhatToShopCell.xib */,
 			);
 			path = "Custom Cell";
 			sourceTree = "<group>";
@@ -1443,9 +1451,11 @@
 				84F5D8CD19694813006A7E3B /* JSFWhereToBuyViewController.xib in Resources */,
 				84F5D8C119694813006A7E3B /* JSFHelpViewController.xib in Resources */,
 				84F5D85719686DD1006A7E3B /* deshicon04.png in Resources */,
+				30FA837F197BA077003D91FB /* adressareaicon@2x.png in Resources */,
 				30B775E8197A7A7C005A2A62 /* contacticon.png in Resources */,
 				84F5D86119686DD1006A7E3B /* deshicon09.png in Resources */,
 				84F5D85619686DD1006A7E3B /* deshicon03@2x.png in Resources */,
+				30FA837D197B9D9C003D91FB /* WhatToShopCell.xib in Resources */,
 				B2C5AF431971AB70005B6422 /* PhotoCollectionViewCell.xib in Resources */,
 				84F5D86219686DD1006A7E3B /* deshicon09@2x.png in Resources */,
 				30B775E6197A7A7C005A2A62 /* callicon.png in Resources */,
@@ -1493,7 +1503,6 @@
 				84F5D87519686DD1006A7E3B /* select_deshicon05.png in Resources */,
 				84F5D86A19686DD1006A7E3B /* deshicon13@2x.png in Resources */,
 				3018933519789900005A7E28 /* videoicon03@2x.png in Resources */,
-				30B775E4197A7A7C005A2A62 /* adressareaicon.png in Resources */,
 				84F5D86319686DD1006A7E3B /* deshicon10.png in Resources */,
 				84BD7A671965E22400C0B912 /* topdeshwithtxt@2x.jpg in Resources */,
 				84BD7A681965E22400C0B912 /* userbg.png in Resources */,
@@ -1563,6 +1572,7 @@
 				84BD7A351965220C00C0B912 /* Events.m in Sources */,
 				84BDBB5919556030005D2A12 /* NSObject+MagicalDataImport.m in Sources */,
 				84BDBB5219556030005D2A12 /* AFURLRequestSerialization.m in Sources */,
+				30FA837C197B9D9C003D91FB /* WhatToShopCell.m in Sources */,
 				84BDBB5519556030005D2A12 /* MagicalImportFunctions.m in Sources */,
 				84BDBB6B19556030005D2A12 /* MagicalRecord+Options.m in Sources */,
 				84BDBB6719556030005D2A12 /* NSPersistentStoreCoordinator+MagicalRecord.m in Sources */,
