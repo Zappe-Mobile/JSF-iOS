@@ -22,6 +22,15 @@
 		30A001C9197A5B230026B724 /* EventDetailPartnerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30A001C8197A5B230026B724 /* EventDetailPartnerCollectionViewCell.xib */; };
 		30A001CC197A5B3A0026B724 /* EventDetailVideoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A001CB197A5B3A0026B724 /* EventDetailVideoCollectionViewCell.m */; };
 		30A001CE197A5B440026B724 /* EventDetailVideoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30A001CD197A5B440026B724 /* EventDetailVideoCollectionViewCell.xib */; };
+		30B2A5CE197D656800C81FA0 /* arrowicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30B2A5C5197D656800C81FA0 /* arrowicon@2x.png */; };
+		30B2A5CF197D656800C81FA0 /* bannereffectbg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30B2A5C6197D656800C81FA0 /* bannereffectbg@2x.png */; };
+		30B2A5D0197D656800C81FA0 /* explorebtnbg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30B2A5C7197D656800C81FA0 /* explorebtnbg@2x.png */; };
+		30B2A5D1197D656800C81FA0 /* featicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30B2A5C8197D656800C81FA0 /* featicon@2x.png */; };
+		30B2A5D2197D656800C81FA0 /* feeltextwitharrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30B2A5C9197D656800C81FA0 /* feeltextwitharrow@2x.png */; };
+		30B2A5D3197D656800C81FA0 /* footerbg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30B2A5CA197D656800C81FA0 /* footerbg@2x.jpg */; };
+		30B2A5D4197D656800C81FA0 /* googleaddimg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30B2A5CB197D656800C81FA0 /* googleaddimg@2x.jpg */; };
+		30B2A5D5197D656800C81FA0 /* jsflogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30B2A5CC197D656800C81FA0 /* jsflogo@2x.png */; };
+		30B2A5D6197D656800C81FA0 /* mapicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30B2A5CD197D656800C81FA0 /* mapicon@2x.png */; };
 		30B775E6197A7A7C005A2A62 /* callicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 30B775E0197A7A7C005A2A62 /* callicon.png */; };
 		30B775E8197A7A7C005A2A62 /* contacticon.png in Resources */ = {isa = PBXBuildFile; fileRef = 30B775E2197A7A7C005A2A62 /* contacticon.png */; };
 		30B775E9197A7A7C005A2A62 /* shopimg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30B775E3197A7A7C005A2A62 /* shopimg.jpg */; };
@@ -251,7 +260,6 @@
 		B2C5AF4D19722E96005B6422 /* EventDetailImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2C5AF4C19722E96005B6422 /* EventDetailImageCollectionViewCell.xib */; };
 		B2C5AF5319722EED005B6422 /* EventDetailCollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C5AF5219722EED005B6422 /* EventDetailCollectionHeaderView.m */; };
 		B2C5AF5519722EF9005B6422 /* EventDetailCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2C5AF5419722EF9005B6422 /* EventDetailCollectionHeaderView.xib */; };
-		B2C5AF57197233BF005B6422 /* Shop Description in Resources */ = {isa = PBXBuildFile; fileRef = B2C5AF56197233BF005B6422 /* Shop Description */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -282,6 +290,15 @@
 		30A001CA197A5B3A0026B724 /* EventDetailVideoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailVideoCollectionViewCell.h; sourceTree = "<group>"; };
 		30A001CB197A5B3A0026B724 /* EventDetailVideoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailVideoCollectionViewCell.m; sourceTree = "<group>"; };
 		30A001CD197A5B440026B724 /* EventDetailVideoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventDetailVideoCollectionViewCell.xib; sourceTree = "<group>"; };
+		30B2A5C5197D656800C81FA0 /* arrowicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrowicon@2x.png"; sourceTree = "<group>"; };
+		30B2A5C6197D656800C81FA0 /* bannereffectbg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bannereffectbg@2x.png"; sourceTree = "<group>"; };
+		30B2A5C7197D656800C81FA0 /* explorebtnbg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "explorebtnbg@2x.png"; sourceTree = "<group>"; };
+		30B2A5C8197D656800C81FA0 /* featicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "featicon@2x.png"; sourceTree = "<group>"; };
+		30B2A5C9197D656800C81FA0 /* feeltextwitharrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feeltextwitharrow@2x.png"; sourceTree = "<group>"; };
+		30B2A5CA197D656800C81FA0 /* footerbg@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "footerbg@2x.jpg"; sourceTree = "<group>"; };
+		30B2A5CB197D656800C81FA0 /* googleaddimg@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "googleaddimg@2x.jpg"; sourceTree = "<group>"; };
+		30B2A5CC197D656800C81FA0 /* jsflogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jsflogo@2x.png"; sourceTree = "<group>"; };
+		30B2A5CD197D656800C81FA0 /* mapicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapicon@2x.png"; sourceTree = "<group>"; };
 		30B775E0197A7A7C005A2A62 /* callicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = callicon.png; sourceTree = "<group>"; };
 		30B775E2197A7A7C005A2A62 /* contacticon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contacticon.png; sourceTree = "<group>"; };
 		30B775E3197A7A7C005A2A62 /* shopimg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shopimg.jpg; sourceTree = "<group>"; };
@@ -618,7 +635,6 @@
 		B2C5AF5119722EED005B6422 /* EventDetailCollectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailCollectionHeaderView.h; sourceTree = "<group>"; };
 		B2C5AF5219722EED005B6422 /* EventDetailCollectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailCollectionHeaderView.m; sourceTree = "<group>"; };
 		B2C5AF5419722EF9005B6422 /* EventDetailCollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventDetailCollectionHeaderView.xib; sourceTree = "<group>"; };
-		B2C5AF56197233BF005B6422 /* Shop Description */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Shop Description"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -657,6 +673,22 @@
 				30189324197898A0005A7E28 /* silderarrowright.png */,
 			);
 			path = "Photo Gallery";
+			sourceTree = "<group>";
+		};
+		30B2A5C4197D656800C81FA0 /* Shop Description */ = {
+			isa = PBXGroup;
+			children = (
+				30B2A5C5197D656800C81FA0 /* arrowicon@2x.png */,
+				30B2A5C6197D656800C81FA0 /* bannereffectbg@2x.png */,
+				30B2A5C7197D656800C81FA0 /* explorebtnbg@2x.png */,
+				30B2A5C8197D656800C81FA0 /* featicon@2x.png */,
+				30B2A5C9197D656800C81FA0 /* feeltextwitharrow@2x.png */,
+				30B2A5CA197D656800C81FA0 /* footerbg@2x.jpg */,
+				30B2A5CB197D656800C81FA0 /* googleaddimg@2x.jpg */,
+				30B2A5CC197D656800C81FA0 /* jsflogo@2x.png */,
+				30B2A5CD197D656800C81FA0 /* mapicon@2x.png */,
+			);
+			path = "Shop Description";
 			sourceTree = "<group>";
 		};
 		30B775DD197A7A7C005A2A62 /* What to Shop */ = {
@@ -775,9 +807,9 @@
 		84BD7A501965E22400C0B912 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				30B2A5C4197D656800C81FA0 /* Shop Description */,
 				30B775DD197A7A7C005A2A62 /* What to Shop */,
 				30189322197898A0005A7E28 /* Photo Gallery */,
-				B2C5AF56197233BF005B6422 /* Shop Description */,
 				8472988B1970365B00094668 /* Navigation */,
 				84BD7A511965E22400C0B912 /* Dashboard */,
 				84BD7A521965E22400C0B912 /* Events Listing */,
@@ -1392,6 +1424,7 @@
 				84F5D86B19686DD1006A7E3B /* deshicon14.png in Resources */,
 				84D059B1196AB8CF00D03E82 /* PartnerCollectionHeaderView.xib in Resources */,
 				84F5D86719686DD1006A7E3B /* deshicon12.png in Resources */,
+				30B2A5D1197D656800C81FA0 /* featicon@2x.png in Resources */,
 				84F5D87C19686DD1006A7E3B /* select_deshicon08@2x.png in Resources */,
 				B2C5AF4D19722E96005B6422 /* EventDetailImageCollectionViewCell.xib in Resources */,
 				B2C5AF391971A7B6005B6422 /* JSFPhotoGalleryViewController.xib in Resources */,
@@ -1404,7 +1437,6 @@
 				84F5D85D19686DD1006A7E3B /* deshicon07.png in Resources */,
 				84F5D87419686DD1006A7E3B /* select_deshicon04@2x.png in Resources */,
 				84F5D8BD19694813006A7E3B /* JSFAboutPatrikaViewController.xib in Resources */,
-				B2C5AF57197233BF005B6422 /* Shop Description in Resources */,
 				84F5D87E19686DD1006A7E3B /* select_deshicon09@2x.png in Resources */,
 				3018933619789900005A7E28 /* videoicon04@2x.png in Resources */,
 				84BD7A601965E22400C0B912 /* fbbg@2x.jpg in Resources */,
@@ -1430,6 +1462,7 @@
 				84F5D85919686DD1006A7E3B /* deshicon05.png in Resources */,
 				84F5D8BE19694813006A7E3B /* JSFAboutUsViewController.xib in Resources */,
 				84F5D85C19686DD1006A7E3B /* deshicon06@2x.png in Resources */,
+				30B2A5D5197D656800C81FA0 /* jsflogo@2x.png in Resources */,
 				84F5D87719686DD1006A7E3B /* select_deshicon06.png in Resources */,
 				84BD7A5F1965E22400C0B912 /* fbbg.jpg in Resources */,
 				84F5D89219688179006A7E3B /* eventbanner@2x.jpg in Resources */,
@@ -1440,6 +1473,7 @@
 				30189321197893C5005A7E28 /* home_icon@2x.png in Resources */,
 				84F5D86D19686DD1006A7E3B /* select_deshicon01.png in Resources */,
 				84BCFF341970437000D08D81 /* JSFWhereToBuyDetailViewController.xib in Resources */,
+				30B2A5D4197D656800C81FA0 /* googleaddimg@2x.jpg in Resources */,
 				84F5D8C019694813006A7E3B /* JSFEventsViewController.xib in Resources */,
 				84F5D87919686DD1006A7E3B /* select_deshicon07.png in Resources */,
 				84F5D85B19686DD1006A7E3B /* deshicon06.png in Resources */,
@@ -1456,7 +1490,9 @@
 				84F5D86119686DD1006A7E3B /* deshicon09.png in Resources */,
 				84F5D85619686DD1006A7E3B /* deshicon03@2x.png in Resources */,
 				30FA837D197B9D9C003D91FB /* WhatToShopCell.xib in Resources */,
+				30B2A5CF197D656800C81FA0 /* bannereffectbg@2x.png in Resources */,
 				B2C5AF431971AB70005B6422 /* PhotoCollectionViewCell.xib in Resources */,
+				30B2A5D0197D656800C81FA0 /* explorebtnbg@2x.png in Resources */,
 				84F5D86219686DD1006A7E3B /* deshicon09@2x.png in Resources */,
 				30B775E6197A7A7C005A2A62 /* callicon.png in Resources */,
 				84F5D87D19686DD1006A7E3B /* select_deshicon09.png in Resources */,
@@ -1476,6 +1512,7 @@
 				84F5D88419686DD1006A7E3B /* select_deshicon12@2x.png in Resources */,
 				30A001C4197A3DF20026B724 /* EventDetailCollectionViewCellItemVideo.xib in Resources */,
 				B2C5AF481971ABB4005B6422 /* VideoCollectionViewCell.xib in Resources */,
+				30B2A5D2197D656800C81FA0 /* feeltextwitharrow@2x.png in Resources */,
 				84F5D8C219694813006A7E3B /* JSFHomeViewController.xib in Resources */,
 				84F5D85419686DD1006A7E3B /* deshicon02@2x.png in Resources */,
 				84F5D8C619694813006A7E3B /* JSFPhotoAlbumsViewController.xib in Resources */,
@@ -1498,10 +1535,12 @@
 				84F5D85A19686DD1006A7E3B /* deshicon05@2x.png in Resources */,
 				84BD7A621965E22400C0B912 /* regbg.png in Resources */,
 				84F5D86519686DD1006A7E3B /* deshicon11.png in Resources */,
+				30B2A5CE197D656800C81FA0 /* arrowicon@2x.png in Resources */,
 				84F5D87119686DD1006A7E3B /* select_deshicon03.png in Resources */,
 				84F5D88819686DD1006A7E3B /* select_deshicon14@2x.png in Resources */,
 				84F5D87519686DD1006A7E3B /* select_deshicon05.png in Resources */,
 				84F5D86A19686DD1006A7E3B /* deshicon13@2x.png in Resources */,
+				30B2A5D6197D656800C81FA0 /* mapicon@2x.png in Resources */,
 				3018933519789900005A7E28 /* videoicon03@2x.png in Resources */,
 				84F5D86319686DD1006A7E3B /* deshicon10.png in Resources */,
 				84BD7A671965E22400C0B912 /* topdeshwithtxt@2x.jpg in Resources */,
@@ -1517,6 +1556,7 @@
 				30B775EC197A7C9C005A2A62 /* areaicon@2x.png in Resources */,
 				84F5D86619686DD1006A7E3B /* deshicon11@2x.png in Resources */,
 				84437FA91954C9A700EE9D43 /* Images.xcassets in Resources */,
+				30B2A5D3197D656800C81FA0 /* footerbg@2x.jpg in Resources */,
 				84BDBB7019556030005D2A12 /* README.mdown in Resources */,
 				84F5D87B19686DD1006A7E3B /* select_deshicon08.png in Resources */,
 				30189329197898A0005A7E28 /* silderarrowleft.png in Resources */,

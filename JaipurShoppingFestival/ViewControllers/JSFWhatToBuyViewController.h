@@ -10,4 +10,5 @@
 
 @interface JSFWhatToBuyViewController : UIViewController
 
+-(id)initWithPlaceId:(NSString *)placeId;
 @end

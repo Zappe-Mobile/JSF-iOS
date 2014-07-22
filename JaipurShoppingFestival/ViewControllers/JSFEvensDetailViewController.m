@@ -128,12 +128,22 @@
     if (arrayEventsImages.count > 0) {
         EventImages * Object = [arrayEventsImages objectAtIndex:1];
         [imgEvent setImageWithURL:[NSURL URLWithString:Object.imageURL] placeholderImage:[UIImage imageNamed:@"eventbanner.jpg"]];
+
     }
     
     imgBanner.image = [UIImage imageNamed:@"bannereffectbg.png"];
     [btnMap setImage:[UIImage imageNamed:@"mapicon"] forState:UIControlStateNormal];
     
     isImageSetup = NO;
+    
+    [self performSelector:@selector(setOverlayImage) withObject:nil afterDelay:5.0];
+}
+
+- (void)setOverlayImage
+{
+    imgBanner.image = [UIImage imageNamed:@"bannereffectbg.png"];
+    [btnMap setImage:[UIImage imageNamed:@"mapicon"] forState:UIControlStateNormal];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -175,7 +185,7 @@
     
     UICollectionViewCell * collectionCell = nil;
     
-    if ([arraySelectedHeaders containsObject:@"Event Images"] && !isImageSetup) {
+    if ([arraySelectedHeaders containsObject:@"Event Images"]) {
         
         EventDetailImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"EventDetailImageCollectionViewCell" forIndexPath:indexPath];
         

@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class PlacesListing;
 @interface JSFWhereToBuyDetailViewController : UIViewController
+
+@property (nonatomic, assign) PlacesListing * placesListing;
 
 @end

@@ -924,6 +924,18 @@
 
 
 /**
+ *  List of All Shops Based on Place Id
+ *
+ *  @return Array
+ */
++ (NSMutableArray *)fetchAllShopsListingForPlaceIdFromCoreData:(NSString *)placeId
+{
+//    return [ShopsListing MR_findAll].mutableCopy;
+    return [ShopsListing MR_findAllWithPredicate:[NSPredicate predicateWithFormat:@"placeId == %@", placeId] inContext:[NSManagedObjectContext MR_defaultContext]].mutableCopy;
+
+}
+
+/**
  *  List of All JSF Partners
  *
  *  @return Array

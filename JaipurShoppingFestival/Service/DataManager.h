@@ -125,6 +125,15 @@
 
 
 /**
+ *  List of All Shops Based on Place Id
+ *
+ *  @return Array
+ */
++ (NSMutableArray *)fetchAllShopsListingForPlaceIdFromCoreData:(NSString *)placeId;
+
+
+
+/**
  *  List of All JSF Partners
  *
  *  @return Array

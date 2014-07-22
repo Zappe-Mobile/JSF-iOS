@@ -7,9 +7,16 @@
 //
 
 #import "JSFWhereToBuyDetailViewController.h"
+#import "JSFWhatToBuyViewController.h"
+#import "UIImageView+AFNetworking.h"
+#import "PlacesListing.h"
 
 @interface JSFWhereToBuyDetailViewController ()
-
+{
+    __weak IBOutlet UIImageView * imgShop;
+    __weak IBOutlet UILabel * lblShopName;
+    __weak IBOutlet UITextView * txtShopDescription;
+}
 @end
 
 @implementation JSFWhereToBuyDetailViewController
@@ -27,6 +34,11 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    [imgShop setImageWithURL:[NSURL URLWithString:_placesListing.placeBanner] placeholderImage:[UIImage imageNamed:@"eventbanner.jpg"]];
+    lblShopName.text = _placesListing.placeName;
+    txtShopDescription.text = _placesListing.placeDescription;
+
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -47,6 +59,13 @@
 - (IBAction)homeButtonClicked:(id)sender
 {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+
+- (IBAction)exploreMoreButtonClicked:(id)sender
+{
+    JSFWhatToBuyViewController * whatToBuyObj = [[JSFWhatToBuyViewController alloc]initWithPlaceId:_placesListing.placeId];
+    [self.navigationController pushViewController:whatToBuyObj animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

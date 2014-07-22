@@ -127,6 +127,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     JSFWhereToBuyDetailViewController * buyDetailObj = [[JSFWhereToBuyDetailViewController alloc]init];
+    PlacesListing * Object = arrayPlaces[indexPath.row];
+    buyDetailObj.placesListing = Object;
     [self.navigationController pushViewController:buyDetailObj animated:YES];
 }
 
